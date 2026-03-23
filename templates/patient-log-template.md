@@ -11,7 +11,7 @@
 
 This template is for tracking **your own** health. Do not use it to record health information about anyone else.
 
-Copy this file and save it with your initials or ID (e.g., `jd-patient-log.md`). Fill in the YAML frontmatter at the top with what you know. Add log entries below as you track symptoms, interventions, and sessions. Paste your log into the chat at the start of each SpoonGuide session.
+Copy this file and save it with your initials or ID (e.g., `jd-patient-log.md`). Fill in your **Profile** — the section at the top between the `---` lines — with what you know. Add entries below as you track symptoms, interventions, and sessions. Paste your Patient Log into the chat at the start of each SpoonGuide session.
 
 ---
 patient_id: ""
@@ -62,7 +62,7 @@ autonomy_acknowledgments: []
 
 # Log entries
 
-Add entries below in chronological order. The coach will generate entries in this format at the end of each session.
+Add entries below in chronological order. The coach will generate Session Log entries in this format at the end of each session.
 
 ## [YYYY-MM-DD] [Entry Type: Intervention | Symptom | Observation | Session]
 

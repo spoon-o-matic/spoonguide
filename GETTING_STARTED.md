@@ -1,11 +1,12 @@
 # SpoonGuide — Getting Started
 
 **Last modified:** 2026-03-23  
-**Version:** 1.0 — Initial getting-started guide with platform comparison
+**Version:** 1.1 — Semantic handoff names, Patient Log framing, glossary link
 
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | 2026-03-23 | Initial structure. Universal content: privacy notice, platform comparison, patient log setup, session start, handoff protocol, troubleshooting. |
+| 1.1 | 2026-03-23 | Handoff protocol: replaced Layer 1/2/3 with Profile, Session Log, Context Bridge. Added Patient Log framing. Plain-language replacements for YAML/frontmatter. Glossary link. |
 
 ---
 
@@ -17,6 +18,9 @@ SpoonGuide helps patients with chronic illness (hEDS, POTS, MCAS, ME/CFS, CCI, L
 
 **This is not a medical provider.** It can make mistakes, including confident-sounding mistakes. Use it to support your thinking and care team conversations — not to replace them. [→ Learn about AI risks in health tools](docs/ai-safety.md)
 
+**SpoonGuide cannot guarantee your safety and may contain mistakes** SpoonGuide is a toolset intended to help you get more helpful results out of your LLM conversations about your health, but it CANNOT promise you accuracy or safety. Always trust your own judgment and your own decisions made with your doctor more than you trust an LLM. SpoonGuide itself was created with the help of an LLM and may contain mistakes. 
+
+If you ever get concerning results with an LLM using SpoonGuide, or notice something in SpoonGuide materials that seems wrong, please [file an issue](https://github.com/spoon-o-matic/spoonguide/issues) or [submit a PR correction](https://github.com/spoon-o-matic/spoonguide/pulls) on GitHub to help us improve SpoonGuide.
 ---
 
 ## Privacy notice
@@ -26,7 +30,7 @@ SpoonGuide helps patients with chronic illness (hEDS, POTS, MCAS, ME/CFS, CCI, L
 Your conversations are processed by whichever LLM platform you choose (Google, Anthropic, OpenAI, or Cursor's model providers). Each platform has its own data retention and privacy policies.
 
 - **SpoonGuide does not collect or store your data.** This project has no servers that receive your information.
-- **Your own patient log file lives on your device.** You choose when to share it by pasting it into the chat. It is never uploaded automatically.
+- **Your patient log file lives on your device.** You choose when to share it by pasting it into the chat. It is never uploaded automatically.
 - **Platform policies vary.** Check your chosen platform's privacy and activity retention settings. You can often turn off or reduce how long your conversations are stored.
 
 ---
@@ -46,30 +50,32 @@ Follow the setup guide for your chosen platform. The guides walk you through loa
 
 ---
 
-## Set up your patient log
+## Set up your Patient Log
 
-Your patient log is a personal file where you record your own conditions, medications, symptoms, and session summaries. The coach uses it to understand your history and tailor its support. You keep it on your device and paste it into the chat when you start a session.
+Your **Patient Log** is a personal file where you record your conditions, medications, symptoms, and session summaries. The coach uses it to understand your history and tailor its support. You keep it on your device and paste it into the chat when you start a session.
+
+**Your Patient Log = your Profile + all your Session Logs.** The Profile (at the top) holds your stable information — meds, triggers, contraindications. Each Session Log is a record of one coaching session, added over time. The coach generates both when you do a handoff.
 
 1. Download the patient log template: [patient-log-template.md](templates/patient-log-template.md)
 2. Open it in any text editor (Notes, TextEdit, Notepad, VS Code — anything that saves plain text)
 3. Save it with a name you'll recognize — for example: `jd-patient-log.md`
-4. Fill in the YAML frontmatter fields (the section at the top between the `---` lines) with what you know right now. It's okay to leave fields blank and fill them in during your first session.
-5. You do not need to add any log body entries yet.
+4. Fill in your **Profile** — the section at the top between the `---` lines — with what you know right now. It's okay to leave fields blank and fill them in during your first session.
+5. You do not need to add any Session Log entries yet.
 
-**Your log file stays on your device.** It is never uploaded automatically. You choose when to share it by pasting it into the chat.
+**Your Patient Log stays on your device.** It is never uploaded automatically. You choose when to share it by pasting it into the chat.
 
 ---
 
 ## Start your first session
 
 1. Open your coach (Gem / Claude Project / Custom GPT / Cursor chat) and start a new conversation.
-2. Paste your patient log.
+2. Paste your Patient Log.
 3. Use an opening message like this, filling in the bracketed parts:
 
 ```
-Hi — I'm starting a new session with my patient log. Here it is:
+Hi — I'm starting a new session with my Patient Log. Here it is:
 
-[paste your full patient log here]
+[paste your full Patient Log here]
 
 I don't have much history in the log yet. I'd like to start by [tell the coach what you want to focus on — for example: "doing my intake" / "discussing my current symptoms" / "understanding my POTS better"].
 ```
@@ -97,23 +103,23 @@ Type one of these words at any point during a session:
 
 ### What you'll get
 
-Three blocks of text:
+The handoff gives you three parts:
 
-- **Layer 1:** Updates to paste into your log file's frontmatter section (the YAML at the top)
-- **Layer 2:** A session log entry to paste into the body of your log file
-- **Layer 3:** A context block to paste at the start of your next session
+- **Profile** — Updates to paste into the top section of your Patient Log (only fields that changed)
+- **Session Log** — A record of this session to paste at the bottom of your Patient Log
+- **Context Bridge** — What to paste at the start of your next session so the AI picks up where you left off
 
 ### If you're too tired for the full handoff
 
-Say **"low energy handoff"** — you'll get Layer 3 only. A note will remind you to fill in the rest when you have more capacity.
+Say **"low energy handoff"** — you'll get your **Context Bridge** only. A note will remind you to fill in the rest when you have more capacity.
 
 ### Step-by-step for using the handoff output
 
 1. Copy the entire handoff block
-2. Open your patient log file
-3. **Layer 1:** Find the YAML frontmatter at the top and update the fields shown (only fields that changed need updating)
-4. **Layer 2:** Paste the session entry at the bottom of your log body
-5. **Layer 3:** Paste this at the start of your next session, before or after your log
+2. Open your Patient Log
+3. **Profile:** Find the top section and update the fields shown (only fields that changed need updating)
+4. **Session Log:** Paste the session entry at the bottom of your Patient Log
+5. **Context Bridge:** Paste this at the start of your next session, before or after your Patient Log
 6. Start a new conversation for your next session
 
 You can also trigger a handoff proactively before you get tired — the coach may suggest it if the session has been long. You don't have to wait for it to suggest.
@@ -134,7 +140,7 @@ You can also trigger a handoff proactively before you get tired — the coach ma
 
 **What it looks like:** It contradicts something established earlier, misses a contraindication, or seems to be missing context.
 
-**Why it happens:** Context window attention degrades in long sessions.
+**Why it happens:** The AI's context window (its working memory for the conversation) has limits; attention to earlier details degrades in long sessions.
 
 **What to do:** Trigger a handoff and start a fresh session. If you're mid-topic, say "before we continue — quick handoff" and it will generate the block without derailing the conversation.
 
@@ -151,3 +157,4 @@ You can also trigger a handoff proactively before you get tired — the coach ma
 - **Platform-specific troubleshooting** — See your platform's setup guide (Gemini, Claude, ChatGPT, or Cursor) for issues like model switching or platform-specific limits.
 - **Parameters document** — [chronic-illness-coach-parameters.md](docs/parameters/chronic-illness-coach-parameters.md) — the full system prompt and behavioral specification.
 - **AI safety** — [ai-safety.md](docs/ai-safety.md) — risks and limitations of AI in health tools.
+- **AI terms glossary** — [ai-glossary.md](docs/ai-glossary.md) — plain-language definitions of LLM, context, tokens, and SpoonGuide terms like Profile, Session Log, and Context Bridge.

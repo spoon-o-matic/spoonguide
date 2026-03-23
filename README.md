@@ -60,6 +60,7 @@ Do not ever substitute an LLM response for the care of a qualified professional.
 - [Roadmap](docs/roadmap.md)
 - [Contributing](CONTRIBUTING.md)
 - [AI Safety](docs/ai-safety.md)
+- [AI Terms Glossary](docs/ai-glossary.md)
 - [Community Commitment](docs/community-commitment.md)
 - [Code of Conduct](CODE_OF_CONDUCT.md)
 

@@ -6,12 +6,13 @@
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | 2026-03-23 | Initial guide. Hobby vs Pro. Model trade-offs (Claude, GPT, Gemini). Rule-based and @file parameter loading. Direct log file editing. |
+| 1.1 | 2026-03-23 | Replaced Layer 1/2/3 with Profile, Session Log, Context Bridge. Patient Log consistency. |
 
 ---
 
 This guide covers **Cursor-specific setup** for SpoonGuide. For privacy notice, patient log setup, starting your first session, the handoff protocol, and general troubleshooting, see **[GETTING_STARTED.md](../../GETTING_STARTED.md)**.
 
-**Who this is for:** Cursor is an advanced option for users comfortable with a code editor. The main benefit: the AI can **read and directly edit your patient log file**, eliminating the copy-paste handoff step. Your log stays in the workspace; the AI applies Layer 1 and Layer 2 updates for you.
+**Who this is for:** Cursor is an advanced option for users comfortable with a code editor. The main benefit: the AI can **read and directly edit your Patient Log**, eliminating the copy-paste handoff step. Your log stays in the workspace; the AI applies Profile and Session Log updates for you.
 
 ---
 
@@ -77,7 +78,7 @@ description: SpoonGuide chronic illness coach — follow parameters when user is
 alwaysApply: true
 ---
 
-When the user shares their own patient log or asks for chronic illness coaching, you are the SpoonGuide coach.
+When the user shares their own Patient Log or asks for chronic illness coaching, you are the SpoonGuide coach.
 
 Your full behavioral parameters, clinical knowledge, and session protocols are in:
 docs/parameters/chronic-illness-coach-parameters.md
@@ -98,21 +99,21 @@ In each chat session, reference the parameters file so Cursor loads it:
 - Type `@docs/parameters/chronic-illness-coach-parameters.md` (or `@chronic-illness-coach-parameters.md` if Cursor resolves it)
 - Or drag the file into the chat
 
-Then paste your patient log and start the session. This ensures the full parameters are in context every time.
+Then paste your Patient Log and start the session. This ensures the full parameters are in context every time.
 
 ---
 
 ## Log file workflow (Cursor advantage)
 
-Keep your patient log in the workspace — for example, `my-patient-log.md` in the repo root or a `logs/` folder.
+Keep your Patient Log in the workspace — for example, `my-patient-log.md` in the repo root or a `logs/` folder.
 
 **Why this matters:** Cursor can read and write files. When you trigger a handoff, you can ask the AI to:
 
-1. **Apply Layer 1** — Edit the YAML frontmatter in your log file directly
-2. **Apply Layer 2** — Append the session entry to the bottom of your log
-3. **Provide Layer 3** — Give you the context block for your next session (you still paste this manually at the start of the next chat)
+1. **Apply Profile** — Edit the top section of your Patient Log directly
+2. **Apply Session Log** — Append the session entry to the bottom of your log
+3. **Provide Context Bridge** — Give you the block to paste at the start of your next session (you still paste this manually)
 
-**Example prompt after a handoff:** "Apply the Layer 1 frontmatter updates and Layer 2 session entry to my-patient-log.md. Give me Layer 3 to paste at the start of my next session."
+**Example prompt after a handoff:** "Apply the Profile updates and Session Log entry to my-patient-log.md. Give me my Context Bridge to paste at the start of my next session."
 
 The AI will edit the file. Review the changes before your next session.
 
@@ -120,14 +121,14 @@ The AI will edit the file. Review the changes before your next session.
 
 ## Starting a session
 
-1. Open your patient log file in the editor (or have it in the workspace)
+1. Open your Patient Log in the editor (or have it in the workspace)
 2. Open a new Cursor chat (Agent or Composer)
 3. If using Option B, reference `@chronic-illness-coach-parameters.md`
-4. Paste your patient log (or type `@my-patient-log.md` if it's in the workspace)
+4. Paste your Patient Log (or type `@my-patient-log.md` if it's in the workspace)
 5. Use an opening like:
 
 ```
-Hi — I'm starting a new session with my patient log. Here it is:
+Hi — I'm starting a new session with my Patient Log. Here it is:
 
 [paste or @ your log]
 
@@ -144,18 +145,18 @@ Trigger a handoff by typing `handoff`, `new chat`, or `session summary`.
 
 **Exact prompt to run:** After the AI generates the handoff block, say:
 
-> Apply the Layer 1 frontmatter updates and Layer 2 session entry to `my-patient-log.md`. Give me Layer 3 to paste at the start of my next session.
+> Apply the Profile updates and Session Log entry to `my-patient-log.md`. Give me my Context Bridge to paste at the start of my next session.
 
 (Replace `my-patient-log.md` with your log filename.)
 
-The AI will edit the YAML frontmatter at the top of your log and append the session entry to the bottom. It will also output Layer 3 (the context block) for you to paste at the start of your next chat.
+The AI will edit the Profile at the top of your log and append the Session Log entry to the bottom. It will also output your Context Bridge for you to paste at the start of your next chat.
 
 **Expected AI responses:**
-- Confirmation that Layer 1 frontmatter was updated (or which fields were changed)
-- Confirmation that Layer 2 session entry was appended
-- A Layer 3 copy block for you to paste into your next session
+- Confirmation that Profile was updated (or which fields were changed)
+- Confirmation that Session Log entry was appended
+- A Context Bridge copy block for you to paste into your next session
 
-**Verification:** Open your log file in the editor and visually confirm the frontmatter changes and the new session entry at the bottom before starting your next session.
+**Verification:** Open your log file in the editor and visually confirm the Profile changes and the new Session Log entry at the bottom before starting your next session.
 
 **Without file access:** Use the standard three-step copy-paste from [GETTING_STARTED.md](../../GETTING_STARTED.md).
 
@@ -203,7 +204,7 @@ Use this template for each test session:
 - Hard refusal list respected: [ ] Yes  [ ] No  [ ] Not tested
 - Handoff triggered correctly: [ ] Yes  [ ] No  [ ] Not tested
 - Low-energy handoff variant worked: [ ] Yes  [ ] No  [ ] Not tested
-- Direct file edit (Layer 1 + 2) accurate: [ ] Yes  [ ] No  [ ] Not tested
+- Direct file edit (Profile + Session Log) accurate: [ ] Yes  [ ] No  [ ] Not tested
 
 **Cognitive load observations:**
 - Rule vs @file — which was more reliable: 
