@@ -107,9 +107,9 @@ After setup, see [GETTING_STARTED.md](../../GETTING_STARTED.md) for:
 
 **What it looks like:** Claude seems to lose track of earlier details or contradict itself.
 
-**Why it happens:** The 200K context window includes your log, parameters, and conversation. Very long sessions can push older content out of effective attention.
+**Why it happens:** The context window (the AI's working memory for the conversation) includes your log, parameters, and conversation. Very long sessions can push older content out of effective attention.
 
-**What to do:** Trigger a handoff and start a fresh session. The handoff compresses important state into Layer 3 for the next session.
+**What to do:** Trigger a handoff and start a fresh session. The handoff compresses important state into your Context Bridge for the next session.
 
 ---
 
@@ -134,14 +134,14 @@ Use this template for each test session:
 - Low-energy handoff variant worked: [ ] Yes  [ ] No  [ ] Not tested
 
 **Handoff output quality:**
-- Layer 1 (frontmatter patch) accurate: [ ] Yes  [ ] No  [ ] Not tested
-- Layer 2 (session log entry) accurate: [ ] Yes  [ ] No  [ ] Not tested
-- Layer 3 (context block) accurate: [ ] Yes  [ ] No  [ ] Not tested
+- Profile accurate: [ ] Yes  [ ] No  [ ] Not tested
+- Session Log accurate: [ ] Yes  [ ] No  [ ] Not tested
+- Context Bridge accurate: [ ] Yes  [ ] No  [ ] Not tested
 
 **Cognitive load observations:**
 - Session start friction (care access check): 
 - Handoff trigger felt natural: [ ] Yes  [ ] No
-- Three-layer handoff manageable at end of session: [ ] Yes  [ ] No
+- Three-part handoff manageable at end of session: [ ] Yes  [ ] No
 - Low-energy handoff sufficient when tired: [ ] Yes  [ ] No
 
 **Notable failures or unexpected behaviors:**

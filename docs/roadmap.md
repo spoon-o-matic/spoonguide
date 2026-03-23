@@ -133,7 +133,7 @@ Patient data never touches project infrastructure. Data goes only to the LLM pla
   - `append_log_entry` — validates and persists structured entries
   - `get_patient_context` — assembles token-budgeted context window with filters
   - `patch_frontmatter` — applies partial updates to stable patient data
-  - `generate_handoff` — produces the three-layer handoff block
+  - `generate_handoff` — produces the three-part handoff (Profile, Session Log, Context Bridge)
   - `get_session_context` — optimized session-start context assembly
   - `get_active_trials` — lightweight call for open intervention trials
   - `get_autonomy_acknowledgments` — timestamped acknowledgment log

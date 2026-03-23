@@ -17,15 +17,13 @@ This guide covers **ChatGPT-specific setup** for SpoonGuide. For privacy notice,
 >
 > **SpoonGuide is intended for individuals managing their own health data only.** Do not use it to upload or manage anyone else's health information.
 >
-> Do **not** upload protected health information (PHI) or your personal log to ChatGPT without first confirming that doing so complies with any applicable regulations that apply to you.
->
 > Before using SpoonGuide with ChatGPT:
 > 1. **Review ChatGPT/OpenAI data usage and retention policies** for your plan tier — these vary by subscription and affect how your inputs are stored and processed.
 > 2. **Opt out of data training** in ChatGPT settings where available — check your account settings and disable any options that allow your conversations to be used for model improvement.
 > 3. **Consider privacy implications** — avoid uploading your own health data to third-party services if you have concerns; use de-identified or synthetic logs for testing when possible.
-> 4. **Consult a privacy professional or compliance advisor** if you have questions before using your personal log with ChatGPT or any external AI service.
+> 4. **Consult a privacy professional** if you have questions before using your personal log with ChatGPT or any external AI service.
 >
-> SpoonGuide is designed to support chronic illness self-management. Ensuring your data handling complies with HIPAA, GDPR, or other applicable requirements is your responsibility.
+> SpoonGuide is designed to support chronic illness self-management. Ensuring your data handling complies with HIPAA, GDPR, or other applicable requirements, as well as never substituting the advice of an LLM for that of a qualified medical professional, is your sole responsibility.
 
 ---
 
@@ -165,14 +163,14 @@ Use this template for each test session:
 - Low-energy handoff variant worked: [ ] Yes  [ ] No  [ ] Not tested
 
 **Handoff output quality:**
-- Layer 1 (frontmatter patch) accurate: [ ] Yes  [ ] No  [ ] Not tested
-- Layer 2 (session log entry) accurate: [ ] Yes  [ ] No  [ ] Not tested
-- Layer 3 (context block) accurate: [ ] Yes  [ ] No  [ ] Not tested
+- Profile accurate: [ ] Yes  [ ] No  [ ] Not tested
+- Session Log accurate: [ ] Yes  [ ] No  [ ] Not tested
+- Context Bridge accurate: [ ] Yes  [ ] No  [ ] Not tested
 
 **Cognitive load observations:**
 - Session start friction (care access check): 
 - Handoff trigger felt natural: [ ] Yes  [ ] No
-- Three-layer handoff manageable at end of session: [ ] Yes  [ ] No
+- Three-part handoff manageable at end of session: [ ] Yes  [ ] No
 - Low-energy handoff sufficient when tired: [ ] Yes  [ ] No
 
 **Notable failures or unexpected behaviors:**
