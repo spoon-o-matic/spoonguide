@@ -1,0 +1,21 @@
+---
+description: Document audience and language conventions when editing SpoonGuide docs
+globs: "**/*.md"
+alwaysApply: false
+---
+
+# SpoonGuide Document Conventions
+
+When editing markdown files in this repo, consult [docs/DOC_AUDIENCE.md](docs/DOC_AUDIENCE.md) to determine the primary audience.
+
+## Quick reference
+
+- **User-facing** (GETTING_STARTED, README, ai-glossary, ai-safety, platform guides, patient-log-template): Plain language. Avoid jargon. Semantic names primary. Handoff layers: "Profile (Layer 1)", "Session Log (Layer 2)", "Context Bridge (Layer 3)" — never lead with "Layer N:" in explanatory text.
+
+- **LLM-facing** (docs/parameters/chronic-illness-coach-parameters.md): System prompt. Technical precision. AI is the audience. Not written for patient reading.
+
+- **Developer-facing** (roadmap, MAINTENANCE, rfc/, adr/, CONTRIBUTING, architecture): Technical language appropriate.
+
+## Platform guides
+
+Platform guides (gemini, claude, chatgpt, cursor) are mixed: user-facing setup instructions + "Testing notes (developer only)" section at bottom. Use audience-appropriate language per section.

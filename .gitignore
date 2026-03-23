@@ -32,7 +32,6 @@ build/
 
 
 # Cursor AI/editor files
-.cursor/
 .cursor-settings.json
 .cursor-tasks.json
 
