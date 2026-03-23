@@ -3,6 +3,10 @@
 **Last modified:** 2026-03-23  
 **Version:** 1.0 — Initial template from parameters Section 6
 
+| Version | Date | Changes |
+|---------|------|---------|
+| 1.0 | 2026-03-23 | Initial template. YAML frontmatter and log entry format from parameters Section 6. Self-use reminder. |
+
 ---
 
 This template is for tracking **your own** health. Do not use it to record health information about anyone else.
