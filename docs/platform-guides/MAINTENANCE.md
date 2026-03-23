@@ -63,7 +63,7 @@ I need you to validate and update the SpoonGuide platform guides against the cur
 
 **Task:**
 1. For each platform (Gemini, Claude, ChatGPT, Cursor), fetch current information from the official sources:
-   - Gemini: support.google.com/gemini (limits), gemini.google/subscriptions (plans)
+   - Gemini: support.google.com/gemini/answer/16275805 (limits), gemini.google/subscriptions (plans)
    - Claude: anthropic.com/pricing
    - ChatGPT: openai.com/pricing, help.openai.com for Custom GPTs
    - Cursor: cursor.com/pricing, cursor.com/docs/models

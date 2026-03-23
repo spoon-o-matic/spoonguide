@@ -2,6 +2,13 @@
 
 An open-source chronic illness coaching tool for patients with hEDS, POTS, MCAS, ME/CFS, CCI, Long Covid, and related conditions.
 
+## CAUTION: Unstable project in active Alpha development 
+Spoongrid is currently in "Alpha", which means that it is in an extremely unfinished and unstable state. Any use should be considered as "testing" the project for its effectiveness and stability. All project contents are subject to rapid change and evolution. If you are using SpoonGuide, please be willing to at minimum submit [issues](https://github.com/spoon-o-matic/spoonguide/issues) to help SpoonGrid reach a stable and tested Beta status. You can also email experiences and feedback to [michelle@michellefunk.com](mailto:michelle@michellefunk.com)
+
+**SpoonGuide can NEVER guarantee your safety and may contain mistakes** SpoonGuide is a toolset intended to help you get more helpful results out of your LLM conversations about your health, but it CANNOT promise you accuracy or safety. Always trust your own judgment and your own decisions made with your doctor more than you trust an LLM. SpoonGuide itself was created with the help of an LLM and may contain mistakes. Never assume that SpoonGuide or an LLM using SpoonGuide knows better than you and your care guide.
+
+If you ever get wrong or concerning results with an LLM while testing SpoonGuide, or notice something in SpoonGuide materials that seems wrong, please [file an issue](https://github.com/spoon-o-matic/spoonguide/issues) or [submit a PR correction](https://github.com/spoon-o-matic/spoonguide/pulls) on GitHub to help us improve SpoonGuide.
+
 ## What you can do today
 
 You can use SpoonGuide today with no installation. Choose an AI platform (Gemini, Claude, ChatGPT, or Cursor), load SpoonGuide's parameters, and get a coach that follows evidence-informed guardrails and helps you track your care. You keep a personal log file on your device and paste it into the chat at the start of each session. Free and paid options are available for every platform.
@@ -29,6 +36,10 @@ Three principles govern this project. Where they conflict and no design solution
 > SpoonGuide is an AI coaching tool, not a substitute for medical care. It can make mistakes—including confident-sounding mistakes. It may agree with you when it should push back. It may not know enough about your specific conditions to give you accurate information. Use it to support your thinking and your care team conversations—not to replace them.
 >
 > [→ Learn about AI risks in health tools](docs/ai-safety.md)
+
+**Intended use:** SpoonGuide is for individuals managing their own health while under professional medical supervision. Use only your own data. Do not upload or manage health information about others. 
+
+Do not ever substitute an LLM response for the care of a qualified professional. SpoonGrid is designed to assist you in getting better responses from LLMs that can help you in self-management activties that you are doing already. We make our best efforts throughout our documentation and instruction to inform you of the risks of using LLMs for anything regarding your personal health, but we cannot be responsible for your safety -- only you can be responsible for your safety. SpoonGuide may contain factual or other errors. Use your own judgment and please submit issues to the SpoonGuide project if you find any problems in our documentation.
 
 ## Quick links
 

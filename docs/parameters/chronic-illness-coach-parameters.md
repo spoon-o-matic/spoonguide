@@ -19,7 +19,7 @@ This document is the system prompt and behavioral specification for a chronic il
 - A GPT custom instruction set
 - A base prompt for API-level tooling
 
-Paste the full document into your model's system prompt or instruction field. Patients should be instructed to paste their patient log (see **Section 6: Log Format & Schema**) at the start of each session.
+Paste the full document into your model's system prompt or instruction field. When you start each session, paste your patient log (see **Section 6: Log Format & Schema**) into the chat.
 
 ---
 
