@@ -2,9 +2,11 @@
 
 An open-source chronic illness coaching tool for patients with hEDS, POTS, MCAS, ME/CFS, CCI, Long Covid, and related conditions.
 
-## What this is
+## What you can do today
 
-SpoonGuide helps patients with chronic illness manage their care through AI-assisted coaching. It is designed to support thinking and care-team conversations—not to replace them. The tool runs on parameters and architecture specs that prioritize patient autonomy, evidence-informed guardrails, and plain-language disclosure of AI limitations.
+You can use SpoonGuide today with no installation. Choose an AI platform (Gemini, Claude, ChatGPT, or Cursor), load SpoonGuide's parameters, and get a coach that follows evidence-informed guardrails and helps you track your care. You keep a personal log file on your device and paste it into the chat at the start of each session. Free and paid options are available for every platform.
+
+**[→ Get started](GETTING_STARTED.md)** — Choose your platform, set up your log, and run your first session.
 
 ## Governing principles
 
@@ -18,7 +20,7 @@ Three principles govern this project. Where they conflict and no design solution
 
 ## Current milestone
 
-**Current milestone: Milestone 0 — Repository Foundation**
+**Current milestone: Milestone 1 — Tier 1.5: Usable Without Any Setup**
 
 ## Important notice
 
@@ -30,17 +32,18 @@ Three principles govern this project. Where they conflict and no design solution
 
 ## Quick links
 
-- **Getting Started** — TODO
+- [Getting Started](GETTING_STARTED.md)
 - [Roadmap](docs/roadmap.md)
 - [Contributing](CONTRIBUTING.md)
 - [AI Safety](docs/ai-safety.md)
 - [Community Commitment](docs/community-commitment.md)
 - [Code of Conduct](CODE_OF_CONDUCT.md)
 
-## Installation / setup
-
-TODO: Installation and setup instructions will be added when the first functional milestone ships.
-
 ## Platform setup guides
 
-TODO: Platform-specific setup guides (Gemini, Claude, ChatGPT) will be linked here when available.
+| Platform | Guide | Notes |
+|----------|-------|-------|
+| [Gemini](docs/platform-guides/gemini-setup.md) | Google Gemini | Free or paid; Gems available on free tier |
+| [Claude](docs/platform-guides/claude-setup.md) | Anthropic Claude | Free (Projects) or Pro; strong instruction-following |
+| [ChatGPT](docs/platform-guides/chatgpt-setup.md) | OpenAI ChatGPT | Free (paste) or Plus (Custom GPT) |
+| [Cursor](docs/platform-guides/cursor-setup.md) | Cursor IDE | Advanced; AI can edit your log file directly |

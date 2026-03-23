@@ -18,7 +18,10 @@ Thumbs.db
 
 # Env files
 .env
-.env.*
+.env.local
+.env.*.local
+!.env.example
+!.env.template
 
 # Coverage
 coverage/
