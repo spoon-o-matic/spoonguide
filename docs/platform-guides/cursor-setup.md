@@ -140,7 +140,22 @@ I'd like to start by [your focus].
 
 Trigger a handoff by typing `handoff`, `new chat`, or `session summary`.
 
-**With direct file access:** Ask the AI to apply Layer 1 and Layer 2 to your log file. You copy only Layer 3 for the next session.
+### With direct file access
+
+**Exact prompt to run:** After the AI generates the handoff block, say:
+
+> Apply the Layer 1 frontmatter updates and Layer 2 session entry to `my-patient-log.md`. Give me Layer 3 to paste at the start of my next session.
+
+(Replace `my-patient-log.md` with your log filename.)
+
+The AI will edit the YAML frontmatter at the top of your log and append the session entry to the bottom. It will also output Layer 3 (the context block) for you to paste at the start of your next chat.
+
+**Expected AI responses:**
+- Confirmation that Layer 1 frontmatter was updated (or which fields were changed)
+- Confirmation that Layer 2 session entry was appended
+- A Layer 3 copy block for you to paste into your next session
+
+**Verification:** Open your log file in the editor and visually confirm the frontmatter changes and the new session entry at the bottom before starting your next session.
 
 **Without file access:** Use the standard three-step copy-paste from [GETTING_STARTED.md](../../GETTING_STARTED.md).
 
