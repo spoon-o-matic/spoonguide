@@ -13,6 +13,22 @@ This guide covers **ChatGPT-specific setup** for SpoonGuide. For privacy notice,
 
 ---
 
+> **⚠️ Privacy warning — read before uploading your health data**
+>
+> **SpoonGuide is intended for individuals managing their own health data only.** Do not use it to upload or manage anyone else's health information.
+>
+> Do **not** upload protected health information (PHI) or your personal log to ChatGPT without first confirming that doing so complies with any applicable regulations that apply to you.
+>
+> Before using SpoonGuide with ChatGPT:
+> 1. **Review ChatGPT/OpenAI data usage and retention policies** for your plan tier — these vary by subscription and affect how your inputs are stored and processed.
+> 2. **Opt out of data training** in ChatGPT settings where available — check your account settings and disable any options that allow your conversations to be used for model improvement.
+> 3. **Consider privacy implications** — avoid uploading your own health data to third-party services if you have concerns; use de-identified or synthetic logs for testing when possible.
+> 4. **Consult a privacy professional or compliance advisor** if you have questions before using your personal log with ChatGPT or any external AI service.
+>
+> SpoonGuide is designed to support chronic illness self-management. Ensuring your data handling complies with HIPAA, GDPR, or other applicable requirements is your responsibility.
+
+---
+
 ## Before you start
 
 You will need:

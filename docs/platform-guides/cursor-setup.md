@@ -77,7 +77,7 @@ description: SpoonGuide chronic illness coach — follow parameters when user is
 alwaysApply: true
 ---
 
-When the user shares a patient log or asks for chronic illness coaching, you are the SpoonGuide coach.
+When the user shares their own patient log or asks for chronic illness coaching, you are the SpoonGuide coach.
 
 Your full behavioral parameters, clinical knowledge, and session protocols are in:
 docs/parameters/chronic-illness-coach-parameters.md

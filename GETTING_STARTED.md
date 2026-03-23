@@ -13,6 +13,8 @@
 
 SpoonGuide helps patients with chronic illness (hEDS, POTS, MCAS, ME/CFS, CCI, Long Covid, and related conditions) manage their care through AI-assisted coaching. You use an LLM platform — Gemini, Claude, ChatGPT, or Cursor — loaded with SpoonGuide's parameters to get a coach that follows evidence-informed guardrails, supports your thinking, and helps you advocate with your care team.
 
+**SpoonGuide is for you to manage your own health.** Use only your own data — do not upload or manage someone else's health information.
+
 **This is not a medical provider.** It can make mistakes, including confident-sounding mistakes. Use it to support your thinking and care team conversations — not to replace them. [→ Learn about AI risks in health tools](docs/ai-safety.md)
 
 ---
@@ -24,7 +26,7 @@ SpoonGuide helps patients with chronic illness (hEDS, POTS, MCAS, ME/CFS, CCI, L
 Your conversations are processed by whichever LLM platform you choose (Google, Anthropic, OpenAI, or Cursor's model providers). Each platform has its own data retention and privacy policies.
 
 - **SpoonGuide does not collect or store your data.** This project has no servers that receive your information.
-- **Your patient log file lives on your device.** You choose when to share it by pasting it into the chat. It is never uploaded automatically.
+- **Your own patient log file lives on your device.** You choose when to share it by pasting it into the chat. It is never uploaded automatically.
 - **Platform policies vary.** Check your chosen platform's privacy and activity retention settings. You can often turn off or reduce how long your conversations are stored.
 
 ---
@@ -46,7 +48,7 @@ Follow the setup guide for your chosen platform. The guides walk you through loa
 
 ## Set up your patient log
 
-Your patient log is a personal file where you record your conditions, medications, symptoms, and session summaries. The coach uses it to understand your history and tailor its support. You keep it on your device and paste it into the chat when you start a session.
+Your patient log is a personal file where you record your own conditions, medications, symptoms, and session summaries. The coach uses it to understand your history and tailor its support. You keep it on your device and paste it into the chat when you start a session.
 
 1. Download the patient log template: [patient-log-template.md](templates/patient-log-template.md)
 2. Open it in any text editor (Notes, TextEdit, Notepad, VS Code — anything that saves plain text)
