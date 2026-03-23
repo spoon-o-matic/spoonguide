@@ -44,23 +44,23 @@ Terms we intentionally use in user-facing materials to build fluency. On first u
 
 **Relationship:** Patient Log = Profile + all Session Logs. The Profile is at the top; each Session Log is a new entry added over time.
 
-### Profile
+### Profile (Layer 1)
 **Definition:** The stable facts about you at the top of your Patient Log — medications, triggers, contraindications, care access, baseline capacity, and similar information. It changes only when something meaningful changes (e.g., a new medication, a newly identified trigger).
 
-### Session Log
+### Session Log (Layer 2)
 **Definition:** A record of what happened in a single coaching session — topics covered, interventions discussed, symptom patterns flagged, coach observations. Each session produces one Session Log entry, which you add to the bottom of your Patient Log.
 
 **Relationship:** Your Patient Log is the accumulation of all your Session Logs plus your Profile.
 
-### Context Bridge
+### Context Bridge (Layer 3)
 **Definition:** The block of text the coach generates at the end of a session that you paste at the **start** of your next session. It summarizes where you left off, active intervention trials, open questions, and critical context to carry forward — bridging the gap between sessions so the AI starts with full context.
 
 **Why we use this:** "Context" teaches the LLM concept; "bridge" conveys that this piece connects sessions across the gap. The name does both.
 
 ### Handoff
-**Definition:** The process of capturing everything important from a session so the next session can start with full context. When you trigger a handoff (by saying "handoff," "new chat," or "session summary"), the coach generates three parts: your **Profile** updates, your **Session Log** entry, and your **Context Bridge**.
+**Definition:** The process of capturing everything important from a session so the next session can start with full context. When you trigger a handoff (by saying "handoff," "new chat," or "session summary"), the coach generates three layers: **Profile (Layer 1)**, **Session Log (Layer 2)**, and **Context Bridge (Layer 3)**.
 
-**Low-energy handoff:** If you're too tired for the full handoff, say "low energy handoff" — you'll get your Context Bridge only. A note will remind you to fill in the rest when you have more capacity.
+**Low-energy handoff:** If you're too tired for the full handoff, say "low energy handoff" — you'll get your Context Bridge (Layer 3) only. A note will remind you to fill in the rest when you have more capacity.
 
 ---
 
@@ -70,7 +70,7 @@ These terms are **not** used in user-facing SpoonGuide materials:
 
 | Term | Replacement | Rationale |
 |------|-------------|-----------|
-| Layer 1 / 2 / 3 | Profile, Session Log, Context Bridge | Architectural labels with no intrinsic meaning; cognitively taxing to map |
+| Layer N as primary label (e.g., "Layer 1: Profile") | Semantic name first: Profile (Layer 1) | Always lead with meaning; layer number in parentheses for context |
 | Frontmatter patch | Profile update | Technical; users don't need to know the format |
 | YAML / frontmatter | "The top section of your Patient Log" / "your Profile section" | Format name irrelevant to user tasks |
 | Context block | Context Bridge | Replaced by semantic name |

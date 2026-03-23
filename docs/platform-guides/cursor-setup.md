@@ -12,7 +12,7 @@
 
 This guide covers **Cursor-specific setup** for SpoonGuide. For privacy notice, patient log setup, starting your first session, the handoff protocol, and general troubleshooting, see **[GETTING_STARTED.md](../../GETTING_STARTED.md)**.
 
-**Who this is for:** Cursor is an advanced option for users comfortable with a code editor. The main benefit: the AI can **read and directly edit your Patient Log**, eliminating the copy-paste handoff step. Your log stays in the workspace; the AI applies Profile and Session Log updates for you.
+**Who this is for:** Cursor is an advanced option for users comfortable with a code editor. The main benefit: the AI can **read and directly edit your Patient Log**, eliminating the copy-paste handoff step. Your log stays in the workspace; the AI applies Profile (Layer 1) and Session Log (Layer 2) updates for you.
 
 ---
 
@@ -109,11 +109,11 @@ Keep your Patient Log in the workspace — for example, `my-patient-log.md` in t
 
 **Why this matters:** Cursor can read and write files. When you trigger a handoff, you can ask the AI to:
 
-1. **Apply Profile** — Edit the top section of your Patient Log directly
-2. **Apply Session Log** — Append the session entry to the bottom of your log
-3. **Provide Context Bridge** — Give you the block to paste at the start of your next session (you still paste this manually)
+1. **Apply Profile (Layer 1)** — Edit the top section of your Patient Log directly
+2. **Apply Session Log (Layer 2)** — Append the session entry to the bottom of your log
+3. **Provide Context Bridge (Layer 3)** — Give you the block to paste at the start of your next session (you still paste this manually)
 
-**Example prompt after a handoff:** "Apply the Profile updates and Session Log entry to my-patient-log.md. Give me my Context Bridge to paste at the start of my next session."
+**Example prompt after a handoff:** "Apply the Profile (Layer 1) updates and Session Log (Layer 2) entry to my-patient-log.md. Give me my Context Bridge (Layer 3) to paste at the start of my next session."
 
 The AI will edit the file. Review the changes before your next session.
 
@@ -145,18 +145,18 @@ Trigger a handoff by typing `handoff`, `new chat`, or `session summary`.
 
 **Exact prompt to run:** After the AI generates the handoff block, say:
 
-> Apply the Profile updates and Session Log entry to `my-patient-log.md`. Give me my Context Bridge to paste at the start of my next session.
+> Apply the Profile (Layer 1) updates and Session Log (Layer 2) entry to `my-patient-log.md`. Give me my Context Bridge (Layer 3) to paste at the start of my next session.
 
 (Replace `my-patient-log.md` with your log filename.)
 
 The AI will edit the Profile at the top of your log and append the Session Log entry to the bottom. It will also output your Context Bridge for you to paste at the start of your next chat.
 
 **Expected AI responses:**
-- Confirmation that Profile was updated (or which fields were changed)
-- Confirmation that Session Log entry was appended
-- A Context Bridge copy block for you to paste into your next session
+- Confirmation that Profile (Layer 1) was updated (or which fields were changed)
+- Confirmation that Session Log (Layer 2) entry was appended
+- A Context Bridge (Layer 3) copy block for you to paste into your next session
 
-**Verification:** Open your log file in the editor and visually confirm the Profile changes and the new Session Log entry at the bottom before starting your next session.
+**Verification:** Open your log file in the editor and visually confirm the Profile (Layer 1) changes and the new Session Log (Layer 2) entry at the bottom before starting your next session.
 
 **Without file access:** Use the standard three-step copy-paste from [GETTING_STARTED.md](../../GETTING_STARTED.md).
 
@@ -204,7 +204,7 @@ Use this template for each test session:
 - Hard refusal list respected: [ ] Yes  [ ] No  [ ] Not tested
 - Handoff triggered correctly: [ ] Yes  [ ] No  [ ] Not tested
 - Low-energy handoff variant worked: [ ] Yes  [ ] No  [ ] Not tested
-- Direct file edit (Profile + Session Log) accurate: [ ] Yes  [ ] No  [ ] Not tested
+- Direct file edit (Profile + Session Log, Layers 1–2) accurate: [ ] Yes  [ ] No  [ ] Not tested
 
 **Cognitive load observations:**
 - Rule vs @file — which was more reliable: 

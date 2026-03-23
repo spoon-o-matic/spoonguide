@@ -109,7 +109,7 @@ After setup, see [GETTING_STARTED.md](../../GETTING_STARTED.md) for:
 
 **Why it happens:** The context window (the AI's working memory for the conversation) includes your log, parameters, and conversation. Very long sessions can push older content out of effective attention.
 
-**What to do:** Trigger a handoff and start a fresh session. The handoff compresses important state into your Context Bridge for the next session.
+**What to do:** Trigger a handoff and start a fresh session. The handoff compresses important state into your Context Bridge (Layer 3) for the next session.
 
 ---
 
@@ -134,9 +134,9 @@ Use this template for each test session:
 - Low-energy handoff variant worked: [ ] Yes  [ ] No  [ ] Not tested
 
 **Handoff output quality:**
-- Profile accurate: [ ] Yes  [ ] No  [ ] Not tested
-- Session Log accurate: [ ] Yes  [ ] No  [ ] Not tested
-- Context Bridge accurate: [ ] Yes  [ ] No  [ ] Not tested
+- Profile (Layer 1) accurate: [ ] Yes  [ ] No  [ ] Not tested
+- Session Log (Layer 2) accurate: [ ] Yes  [ ] No  [ ] Not tested
+- Context Bridge (Layer 3) accurate: [ ] Yes  [ ] No  [ ] Not tested
 
 **Cognitive load observations:**
 - Session start friction (care access check): 

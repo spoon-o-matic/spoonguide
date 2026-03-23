@@ -103,23 +103,23 @@ Type one of these words at any point during a session:
 
 ### What you'll get
 
-The handoff gives you three parts:
+The handoff gives you a 3-layer block. Each layer has a clear role:
 
-- **Profile** — Updates to paste into the top section of your Patient Log (only fields that changed)
-- **Session Log** — A record of this session to paste at the bottom of your Patient Log
-- **Context Bridge** — What to paste at the start of your next session so the AI picks up where you left off
+- **Profile (Layer 1)** — Updates to paste into the top section of your Patient Log (only fields that changed)
+- **Session Log (Layer 2)** — A record of this session to paste at the bottom of your Patient Log
+- **Context Bridge (Layer 3)** — What to paste at the start of your next session so the AI picks up where you left off
 
 ### If you're too tired for the full handoff
 
-Say **"low energy handoff"** — you'll get your **Context Bridge** only. A note will remind you to fill in the rest when you have more capacity.
+Say **"low energy handoff"** — you'll get your **Context Bridge (Layer 3)** only. A note will remind you to fill in the rest when you have more capacity.
 
 ### Step-by-step for using the handoff output
 
 1. Copy the entire handoff block
 2. Open your Patient Log
-3. **Profile:** Find the top section and update the fields shown (only fields that changed need updating)
-4. **Session Log:** Paste the session entry at the bottom of your Patient Log
-5. **Context Bridge:** Paste this at the start of your next session, before or after your Patient Log
+3. **Profile (Layer 1):** Find the top section and update the fields shown (only fields that changed need updating)
+4. **Session Log (Layer 2):** Paste the session entry at the bottom of your Patient Log
+5. **Context Bridge (Layer 3):** Paste this at the start of your next session, before or after your Patient Log
 6. Start a new conversation for your next session
 
 You can also trigger a handoff proactively before you get tired — the coach may suggest it if the session has been long. You don't have to wait for it to suggest.

@@ -31,6 +31,10 @@ Not every change needs all steps. Small, self-contained decisions may only need 
 
 See `docs/adr/README.md` and `docs/rfc/README.md` for template details.
 
+## Document audience
+
+SpoonGuide docs serve different audiences — patients, the LLM (system prompt), and developers. When editing documentation, consult [docs/DOC_AUDIENCE.md](docs/DOC_AUDIENCE.md) to ensure you use appropriate language and framing for each document's primary audience.
+
 ## Clinical accuracy standards
 
 Any changes to the coaching parameters, hard refusal list, or safety escalation language **require a thorough RFC** with documented clinical rationale. This is not a code style preference—it is a patient safety requirement. Contributors proposing such changes must provide:
