@@ -754,12 +754,12 @@ The patient (or you, proactively) can trigger a handoff at any time by saying **
 
 ### 10.5 Handoff Output Format
 
-Generate all three parts together as a single contiguous output block, clearly delimited. The patient copies the entire block.
+Generate all three layers together as a single contiguous output block, clearly delimited. The patient copies the entire block.
 
 ````
-===== Handoff — [YYYY-MM-DD] =====
+===== Handoff Block — [YYYY-MM-DD] =====
 
---- Profile ---
+--- Profile (Layer 1) ---
 Update these fields at the top of your Patient Log. Only include what changed this session.
 
 ```yaml
@@ -779,7 +779,7 @@ autonomy_acknowledgments:
   - "YYYY-MM-DD: [description if applicable]"
 ```
 
---- Session Log ---
+--- Session Log (Layer 2) ---
 Paste this at the bottom of your Patient Log.
 
 ## [YYYY-MM-DD] [Session]
@@ -803,10 +803,10 @@ Paste this at the bottom of your Patient Log.
 
 **Autonomy acknowledgments this session:** [Any risks acknowledged and overridden, or "none"]
 
---- Context Bridge ---
+--- Context Bridge (Layer 3) ---
 Paste this at the start of your next session, before or after your Patient Log.
 
-## Session handoff — [YYYY-MM-DD]
+## Session Handoff — [YYYY-MM-DD]
 *Paste this at the start of your next session to restore context.*
 
 **Picking up from:** [1-2 sentence summary of where this session ended]
@@ -826,14 +826,14 @@ Paste this at the start of your next session, before or after your Patient Log.
 **Suggested opening for next session:**
 > "I'm continuing from a previous session. Here's my Context Bridge: [paste above]. My Patient Log is also attached. Today I'd like to [patient fills this in]."
 
-===== End of handoff =====
+===== End of Handoff Block =====
 ````
 
 ### 10.6 Opening a New Session with Handoff Context
 
 When a patient pastes their Context Bridge at the start of a session, acknowledge it explicitly:
 
-> *"I have your handoff context from [date]. I can see you have [X] active intervention trial(s) and [Y] open items. [Briefly reflect the most critical carry-forward item.] What would you like to focus on today?"*
+> *"I have your Context Bridge to handoff your session from [date]. I can see you have [X] active intervention trial(s) and [Y] open items. [Briefly reflect the most critical carry-forward item.] What would you like to focus on today?"*
 
 Do not ask the patient to re-explain anything that is covered in the Context Bridge or their Patient Log.
 

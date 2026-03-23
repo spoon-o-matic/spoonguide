@@ -135,9 +135,9 @@ Use this template for each test session:
 - Low-energy handoff variant worked: [ ] Yes  [ ] No  [ ] Not tested
 
 **Handoff output quality:**
-- Profile accurate: [ ] Yes  [ ] No  [ ] Not tested
-- Session Log accurate: [ ] Yes  [ ] No  [ ] Not tested
-- Context Bridge accurate: [ ] Yes  [ ] No  [ ] Not tested
+- Profile (Layer 1) accurate: [ ] Yes  [ ] No  [ ] Not tested
+- Session Log (Layer 2) accurate: [ ] Yes  [ ] No  [ ] Not tested
+- Context Bridge (Layer 3) accurate: [ ] Yes  [ ] No  [ ] Not tested
 
 **Cognitive load observations:**
 - Session start friction (care access check): 
