@@ -1,5 +1,12 @@
 # Chronic Illness Coach — Open-Source Project Roadmap
-*Working document — v0.1*
+
+**Last modified:** 2026-03-23  
+**Version:** 0.1 — Working document
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 0.1 | 2026-03-23 | Initial roadmap. Design principles, Milestones 0–4. Privacy-first, accessibility as user-controlled option. |
+
 *Framing: privacy-first architecture, accessibility as user-controlled option at each milestone*
 
 ---
