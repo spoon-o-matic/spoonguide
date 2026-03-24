@@ -16,7 +16,7 @@ SpoonGuide is currently in "pre-Alpha", which means that it is in an extremely n
 
  If you are testing SpoonGuide, please treat any conversations with your LLM with even more skepticism than usual, and be willing to submit [issues](https://github.com/spoon-o-matic/spoonguide/issues) to help SpoonGuide reach a stable and tested Alpha status. You can also email experiences and feedback to [michelle@michellefunk.com](mailto:michelle@michellefunk.com). Always include the version number from the [parameters document](docs/parameters/chronic-illness-coach-parameters.md) in any issue.
 
-**SpoonGuide can NEVER guarantee your safety and may contain mistakes** SpoonGuide is a toolset intended to help you get more helpful results out of your LLM conversations about your health, but it CANNOT promise you accuracy or safety. Always trust your own judgment and your own decisions made with your doctor more than you trust an LLM. 
+**SpoonGuide can NEVER guarantee your safety and may contain mistakes.** SpoonGuide is a toolset intended to help you get more helpful results out of your LLM conversations about your health, but it CANNOT promise you accuracy or safety. Always trust your own judgment and your own decisions made with your doctor more than you trust an LLM.
 
 SpoonGuide itself was created with the help of LLMs and may contain mistakes. Never assume that SpoonGuide or an LLM using SpoonGuide knows better than you and your care team.
 
@@ -52,7 +52,13 @@ Three principles govern this project. Where they conflict and no design solution
 
 **Intended use:** SpoonGuide is for individuals managing their own health while under professional medical supervision. Use only your own data. Do not upload or manage health information about others. 
 
-Do not ever substitute an LLM response for the care of a qualified professional. SpoonGuide is designed to assist you in getting better responses from LLMs that can help you in self-management activities that you are doing already. We make our best efforts throughout our documentation and instruction to inform you of the risks of using LLMs for anything regarding your personal health, but we cannot be responsible for your safety -- only you can be responsible for your safety. SpoonGuide may contain factual or other errors. Use your own judgment and please submit issues to the SpoonGuide project if you find any problems in our documentation.
+Do not ever substitute an LLM response for the care of a qualified professional. SpoonGuide is designed to assist you in getting better responses from LLMs that can help you in self-management activities that you are doing already.
+
+We make our best efforts throughout our documentation and instruction to inform you of the risks of using LLMs for anything regarding your personal health. However, we cannot be responsible for your safety -- only you can be responsible for your safety.
+
+As a toolset built with the help of AI tooling, as well as a patient-created community tool, SpoonGuide may contain factual or other errors due to human or technical errors.
+
+Use your own judgment, and please submit [issues](https://github.com/spoon-o-matic/spoonguide/issues) to the SpoonGuide project if you find any problems in our documentation.
 
 ## Quick links
 
