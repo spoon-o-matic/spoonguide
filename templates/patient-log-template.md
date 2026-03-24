@@ -13,7 +13,7 @@
 
 This template is for tracking **your own** health. Do not use it to record health information about anyone else.
 
-Copy this file and save it with your initials or ID (e.g., `jd-patient-log.md`). You **do not** need to complete the **Profile** (the section at the top between the `---` lines) before your first session — you may leave it blank and let your configured coach walk through intake in chat (see **Section 4** in the [parameters document](../docs/parameters/chronic-illness-coach-parameters.md)). You can also fill in what you know by hand, or use an optional LLM-assisted prompt first; see [GETTING_STARTED.md — Set up your Patient Log](../GETTING_STARTED.md#set-up-your-patient-log).  Paste your Patient Log into the chat at the start of each SpoonGuide session.
+Copy this file and save it with your initials or ID (e.g., `jd-patient-log.md`). You **do not** need to complete the **Profile** (the section at the top between the `---` lines) before your first session — you may leave it blank and let your configured coach walk through intake in chat (see **Section 4** in the [parameters document](../docs/parameters/chronic-illness-coach-parameters.md)). You can also use an optional LLM-assisted prompt first; see [GETTING_STARTED.md — Set up your Patient Log](../GETTING_STARTED.md#set-up-your-patient-log).  Paste your Patient Log into the chat at the start of each SpoonGuide session.
 
 ```markdown
 patient_id: ""
@@ -66,7 +66,9 @@ autonomy_acknowledgments: []
 
 Add entries below in chronological order. The coach will generate Session Log entries in this format at the end of each session.
 
-[YYYY-MM-DD] [Entry Type: Intervention | Symptom | Observation | Session]
+Anything in brackets is meant to be replaced by the information indicated inside the brackets. that is, `[YYYY-MM-DD] [Entry Type: Intervention | Symptom | Observation | Session]` might be filled out as `2026-01-01: Intervention`
+
+# [YYYY-MM-DD]: [Entry Type: Intervention | Symptom | Observation | Session]
 
 
 **State before:** [Baseline at time of entry — functional level, symptoms, confounders like sleep, stress, weather]
