@@ -1,7 +1,7 @@
 # SpoonGuide — Getting Started
 
-**Last modified:** 2026-03-23  
-**Version:** 1.1 — Semantic handoff names, Patient Log framing, glossary link
+**Last modified:** 2026-03-24  
+**Version:** 1.2 — Choose your platform: parallel comparison, correct Gemini free path
 
 ## What SpoonGuide is
 
@@ -30,16 +30,24 @@ Your conversations are processed by whichever LLM platform you choose (Google, A
 
 ## Choose your platform
 
-Pick one platform below. Each has **free** and **paid** setup options. Both paths work — choose based on your budget and how often you'll use the coach.
+SpoonGuide runs on **Gemini, Claude, ChatGPT, or Cursor**. The biggest practical differences are whether the platform **keeps your coaching instructions between chats** without you pasting the long parameters file every time, and whether you want a **normal web app** or **Cursor** (a code editor where the AI can **edit your Patient Log file** for you after a handoff). Limits, models, and privacy settings differ by platform and plan — see the [privacy notice](#privacy-notice) above and each setup guide below.
 
-| Platform | Free setup | Paid setup | Notes |
-|----------|------------|------------|-------|
-| [Gemini](docs/platform-guides/gemini-setup.md) | Paste parameters each session; Gems also available on free tier | Google AI Plus/Pro for higher limits, Pro 3.1 model | Beginner-friendly |
-| [Claude](docs/platform-guides/claude-setup.md) | Projects free — create a Project with parameters | Pro for Opus, more usage | Strong instruction-following |
-| [ChatGPT](docs/platform-guides/chatgpt-setup.md) | Paste parameters each session | Plus for Custom GPTs | Widely familiar interface |
-| [Cursor](docs/platform-guides/cursor-setup.md) | Hobby tier (limited usage) | Pro for frontier models | **Advanced** — AI can edit your log file directly |
+On **Gemini** and **Claude**, free and paid use the **same setup steps**; paying mainly upgrades **model quality** and **usage limits**. **ChatGPT** is different on the free tier: you paste the full parameters document at the start of each new chat unless you use **Plus** and a Custom GPT.
 
-Follow the setup guide for your chosen platform. The guides walk you through loading SpoonGuide's parameters and creating your coach.
+| Platform | Free setup | Paid setup | Consider this if… |
+|----------|------------|------------|-------------------|
+| [Gemini](docs/platform-guides/gemini-setup.md) | Create a **Gem** and upload the parameters as a **knowledge file** — the coach stays configured between chats. Free tier uses the **Fast** model. | Same Gem workflow; paid (e.g. Google AI Plus/Pro) adds **Pro 3.1** / **Thinking**, higher daily limits, and often a larger context window. | You already use Google, or you want a **persistent coach on the free tier** without pasting the full parameters each session. |
+| [Claude](docs/platform-guides/claude-setup.md) | Create a **Project**, upload the parameters as project knowledge, add short project instructions — **persistent** between chats. Free tier uses **Sonnet** with a **daily message cap** (roughly tens of messages; resets periodically). | Same Project workflow; **Pro** adds **Opus** and roughly **more daily usage**. | You want a **strong free persistent setup** (no full-parameter paste each chat) and like Anthropic’s chat experience. |
+| [ChatGPT](docs/platform-guides/chatgpt-setup.md) | **Paste the entire parameters document** at the start of **each** new chat (free tier). | **Plus:** build a **Custom GPT** with the parameters as a **knowledge file** — same persistence idea as a Gem or Project. | You already use ChatGPT daily; free is fine to try SpoonGuide, **Plus** removes the repeat paste. |
+| [Cursor](docs/platform-guides/cursor-setup.md) | **Hobby** plan (limited monthly usage). Load parameters via a **Cursor rule** and/or **`@` file** reference; **clone the repo** so the parameters path is local. | **Pro:** more usage and access to **frontier models**; same workflow. | You’re comfortable in an editor and want the AI to **apply Profile and Session Log updates to your log file** instead of only copy-pasting. |
+
+**Still unsure?**
+
+- **Least copy-paste on a free tier:** **Gemini** (Gem) or **Claude** (Project) — both keep the parameters loaded in a persistent coach.
+- **ChatGPT is home base:** start on **free** (paste each new chat); move to **Plus** if you want a Custom GPT and skip that step.
+- **Less handoff pasting into your log:** **Cursor** — only if the editor workflow works for you; otherwise use a web platform and paste handoff output into your Patient Log.
+
+Follow the setup guide for your chosen platform. Each guide covers free and paid in **one document** so you can upgrade without switching files.
 
 ---
 
