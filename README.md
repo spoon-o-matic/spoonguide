@@ -1,7 +1,7 @@
 # SpoonGuide
 
-**Last modified:** 2026-03-23
-**Version:** 1.0 — Initial README with project overview and quick links
+**Last modified:** 2026-03-24
+**Version:** 1.1 — Platform table aligned with GETTING_STARTED comparison
 
 ---
 
@@ -84,11 +84,12 @@ Use your own judgment, and please submit [issues](https://github.com/spoon-o-mat
 
 | Platform | Guide | Notes |
 |----------|-------|-------|
-| [Gemini](docs/platform-guides/gemini-setup.md) | Google Gemini | Free or paid; Gems available on free tier |
-| [Claude](docs/platform-guides/claude-setup.md) | Anthropic Claude | Free (Projects) or Pro; strong instruction-following |
-| [ChatGPT](docs/platform-guides/chatgpt-setup.md) | OpenAI ChatGPT | Free (paste) or Plus (Custom GPT) |
-| [Cursor](docs/platform-guides/cursor-setup.md) | Cursor IDE | Advanced; AI can edit your log file directly |
+| [Gemini](docs/platform-guides/gemini-setup.md) | Google Gemini | Persistent **Gem** + knowledge file on free or paid; paid improves model and limits |
+| [Claude](docs/platform-guides/claude-setup.md) | Anthropic Claude | Persistent **Project** on free (Sonnet, daily cap); Pro adds Opus and more usage |
+| [ChatGPT](docs/platform-guides/chatgpt-setup.md) | OpenAI ChatGPT | Free: paste parameters each new chat; Plus: **Custom GPT** with knowledge file |
+| [Cursor](docs/platform-guides/cursor-setup.md) | Cursor IDE | Advanced; AI can edit your Patient Log; Hobby or Pro |
 
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | 2026-03-23 | Initial README. Project overview, governing principles, intended use, platform guide links. |
+| 1.1 | 2026-03-24 | Platform notes: persistent Gem/Project, ChatGPT paste vs Custom GPT, Cursor Hobby/Pro. |
