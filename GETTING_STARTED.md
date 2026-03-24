@@ -60,18 +60,18 @@ Your **Patient Log** is a personal file where you record your conditions, medica
 1. Download the patient log template: [patient-log-template.md](templates/patient-log-template.md)
 2. Open it in any text editor (Notes, TextEdit, Notepad, VS Code — anything that saves plain text)
 3. Save it with a name you'll recognize — for example: `jd-patient-log.md`
-4. **Profile:** The top section between the `---` lines holds your stable information. You **do not** need to complete it before your first session — leave fields blank or fill only what you already know. See [Choosing how to fill your Profile](#choosing-how-to-fill-your-profile) for three ways to approach it.
-5. You do not need to add any Session Log entries yet.
+4. **Profile:** The top section between the `---` lines holds your stable information. You **do not** need to manually enter any information here - most users should leave it blank unless very comfortable with writing markdown. You can either generate a profile to start with, or just create your SpoonGuide and have it fill out the profile in "intake". See [Choosing how to fill your Profile](#choosing-how-to-fill-your-profile) for more details.
+5. Do not add any Session Log entries yet.
 
 ### Choosing how to fill your Profile
 
-You **do not** need a finished Profile before your first session. Having a Patient Log **file** (even with empty fields) still helps: you have a place to paste **Profile** and **Session Log** updates after handoffs. You can mix these paths over time — for example, coach-led intake first, then tidy the Profile when a handoff gives you Layer 1 text.
+You **do not** need a finished Profile before your first session. Having a Patient Log **file** (even with empty fields) still helps: you have a place to paste **Profile** and **Session Log** updates after handoffs. 
 
-**1. Manual — edit the Profile in your file**  
-Type or paste into the top section yourself (alone or alongside Session Log entries later).
+**1. Coach onboarding — configure the coach, then intake in chat**  
+Finish platform setup (Gem / Project / Custom GPT / Cursor), paste your Patient Log **as-is** (empty Profile is fine), and say you want to start with intake. The coach follows **Section 4: Patient History Intake Protocol** in the [parameters document](docs/parameters/chronic-illness-coach-parameters.md).
 
-- **Works well if:** You like working directly in the file, or you already have tidy lists (meds, conditions) to copy in.  
-- **Trade-offs:** No extra LLM step to **create** the initial Profile structure, but spacing and list shape matter; a Markdown-friendly editor ([below](#picking-an-app-to-edit-your-patient-log)) reduces mistakes.
+- **Works well if:** You want the **fewest** steps before talking to the coach, or conversation is easier than editing the structured top section.  
+- **Trade-offs:** The first session is **slower** and more Q&A-heavy. You still get Profile material over time — especially via **handoff** — rather than one perfect block before you start.
 
 **2. LLM-assisted — Profile onboarding prompt**  
 Use a copy-paste prompt so an LLM turns your narrative or short answers into Profile text you paste into your log. See [Profile onboarding (LLM-assisted)](docs/prompts/profile-onboarding.md).
@@ -79,13 +79,13 @@ Use a copy-paste prompt so an LLM turns your narrative or short answers into Pro
 - **Works well if:** You want a **draft** Profile **before** your first coached session, or you prefer one brain-dump instead of editing structured text.  
 - **Trade-offs:** You send health-related text to **whichever** LLM you use (sometimes before your SpoonGuide coach exists). Treat the result as a **draft** — check meds, diagnoses wording, and contraindications; fix indentation if needed.
 
-**3. Coach onboarding — configure the coach, then intake in chat**  
-Finish platform setup (Gem / Project / Custom GPT / Cursor), paste your Patient Log **as-is** (empty Profile is fine), and say you want to start with intake. The coach follows **Section 4: Patient History Intake Protocol** in the [parameters document](docs/parameters/chronic-illness-coach-parameters.md).
+**3. Manual — edit the Profile in your file**  
+If you are comfortable working with markdown and don't find the profile's text confusing, type or paste into the top section yourself (alone or alongside Session Log entries later).
 
-- **Works well if:** You want the **fewest** steps before talking to the coach, or conversation is easier than editing the structured top section.  
-- **Trade-offs:** The first session is **slower** and more Q&A-heavy. You still get Profile material over time — especially via **handoff** — rather than one perfect block before you start.
+- **Works well if:** You like working directly in the file, or you already have tidy lists (meds, conditions) to copy in.  
+- **Trade-offs:** No extra LLM step to **create** the initial Profile structure, but spacing and list shape matter; a Markdown-friendly editor ([below](#picking-an-app-to-edit-your-patient-log)) reduces mistakes.
 
-**How these compare:** Paths **2** and **3** both involve sharing health context with an LLM. Path **3** uses your **configured SpoonGuide coach** (full parameters from the first message). Path **2** is optional when you want a **single structured paste** early, including from a generic chat before setup. Path **1** avoids an LLM for **building** the initial Profile yourself (you still **paste** the log into the coach when you run a session).
+**How these compare:** Paths **1** and **2** both involve sharing health context with an LLM. Path **1** uses your **configured SpoonGuide coach** (full parameters from the first message). Path **2** is optional when you want a **single structured paste** early, including from a generic chat before setup. Path **3** avoids an LLM for **building** the initial Profile yourself (you still **paste** the log into the coach when you run a session).
 
 ### Picking an app to edit your Patient Log
 
