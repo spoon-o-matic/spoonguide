@@ -1,17 +1,27 @@
 # SpoonGuide
 
-**Last modified:** 2026-03-23  
+**Last modified:** 2026-03-23
 **Version:** 1.0 — Initial README with project overview and quick links
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 1.0 | 2026-03-23 | Initial README. Project overview, governing principles, intended use, platform guide links. |
 
 ---
 
 An open-source chronic illness coaching tool for patients with hEDS, POTS, MCAS, ME/CFS, CCI, Long Covid, and related conditions.
 
-## CAUTION: Unstable project in active pre-Alpha development 
+**CAUTION: Unstable project in active pre-Alpha development**
+
+## What SpoonGuide is
+
+SpoonGuide helps patients with chronic illness (hEDS, POTS, MCAS, ME/CFS, CCI, Long Covid, and related conditions) manage their care through AI-assisted coaching. You use an LLM platform — Gemini, Claude, ChatGPT, or Cursor — loaded with SpoonGuide's parameters to get a coach that follows evidence-informed guardrails, supports your thinking, and helps you advocate with your care team.
+
+**SpoonGuide is for you to manage your own health.** Use only your own data — do not upload or manage someone else's health information.
+
+**This is not a medical provider.** It can make mistakes, including confident-sounding mistakes. Use it to support your thinking and care team conversations — not to replace them. [→ Learn about AI risks in health tools](docs/ai-safety.md)
+
+**SpoonGuide cannot guarantee your safety and may contain mistakes.** SpoonGuide is a toolset intended to help you get more helpful results out of your LLM conversations about your health, but it CANNOT promise you accuracy or safety. Always trust your own judgment and your own decisions made with your doctor more than you trust an LLM. SpoonGuide itself was created with the help of an LLM and may contain mistakes. 
+
+If you ever get concerning results with an LLM using SpoonGuide, or notice something in SpoonGuide materials that seems wrong, please [file an issue](https://github.com/spoon-o-matic/spoonguide/issues) or [submit a PR correction](https://github.com/spoon-o-matic/spoonguide/pulls) on GitHub to help us improve SpoonGuide.
+
+## SpoonGuide is pre-Alpha and unstable. Use with caution.
 SpoonGuide is currently in "pre-Alpha", which means that it is in an extremely new, untested, unfinished and unstable state. Any use should be considered as "testing" the project for its effectiveness and stability. All project contents are subject to rapid change and evolution.
 
  If you are testing SpoonGuide, please treat any conversations with your LLM with even more skepticism than usual, and be willing to submit [issues](https://github.com/spoon-o-matic/spoonguide/issues) to help SpoonGuide reach a stable and tested Alpha status. You can also email experiences and feedback to [michelle@michellefunk.com](mailto:michelle@michellefunk.com). Always include the version number from the [parameters document](docs/parameters/chronic-illness-coach-parameters.md) in any issue.
@@ -78,3 +88,7 @@ Use your own judgment, and please submit [issues](https://github.com/spoon-o-mat
 | [Claude](docs/platform-guides/claude-setup.md) | Anthropic Claude | Free (Projects) or Pro; strong instruction-following |
 | [ChatGPT](docs/platform-guides/chatgpt-setup.md) | OpenAI ChatGPT | Free (paste) or Plus (Custom GPT) |
 | [Cursor](docs/platform-guides/cursor-setup.md) | Cursor IDE | Advanced; AI can edit your log file directly |
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 1.0 | 2026-03-23 | Initial README. Project overview, governing principles, intended use, platform guide links. |

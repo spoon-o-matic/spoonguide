@@ -3,13 +3,6 @@
 **Last modified:** 2026-03-23  
 **Version:** 1.1 — Semantic handoff names, Patient Log framing, glossary link
 
-| Version | Date | Changes |
-|---------|------|---------|
-| 1.0 | 2026-03-23 | Initial structure. Universal content: privacy notice, platform comparison, patient log setup, session start, handoff protocol, troubleshooting. |
-| 1.1 | 2026-03-23 | Handoff protocol: replaced Layer 1/2/3 with Profile, Session Log, Context Bridge. Added Patient Log framing. Plain-language replacements for YAML/frontmatter. Glossary link. |
-
----
-
 ## What SpoonGuide is
 
 SpoonGuide helps patients with chronic illness (hEDS, POTS, MCAS, ME/CFS, CCI, Long Covid, and related conditions) manage their care through AI-assisted coaching. You use an LLM platform — Gemini, Claude, ChatGPT, or Cursor — loaded with SpoonGuide's parameters to get a coach that follows evidence-informed guardrails, supports your thinking, and helps you advocate with your care team.
@@ -158,3 +151,8 @@ You can also trigger a handoff proactively before you get tired — the coach ma
 - **Parameters document** — [chronic-illness-coach-parameters.md](docs/parameters/chronic-illness-coach-parameters.md) — the full system prompt and behavioral specification.
 - **AI safety** — [ai-safety.md](docs/ai-safety.md) — risks and limitations of AI in health tools.
 - **AI terms glossary** — [ai-glossary.md](docs/ai-glossary.md) — plain-language definitions of LLM, context, tokens, and SpoonGuide terms like Profile, Session Log, and Context Bridge.
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 1.0 | 2026-03-23 | Initial structure. Universal content: privacy notice, platform comparison, patient log setup, session start, handoff protocol, troubleshooting. |
+| 1.1 | 2026-03-23 | Handoff protocol: replaced Layer 1/2/3 with Profile, Session Log, Context Bridge. Added Patient Log framing. Plain-language replacements for YAML/frontmatter. Glossary link. |
