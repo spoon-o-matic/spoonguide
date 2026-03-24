@@ -1,7 +1,7 @@
 # SpoonGuide — Getting Started
 
 **Last modified:** 2026-03-24  
-**Version:** 1.2 — Choose your platform: parallel comparison, correct Gemini free path
+**Version:** 1.3 — Patient Log: markdown-friendly editors; optional LLM-assisted Profile onboarding
 
 ## What SpoonGuide is
 
@@ -62,6 +62,28 @@ Your **Patient Log** is a personal file where you record your conditions, medica
 3. Save it with a name you'll recognize — for example: `jd-patient-log.md`
 4. Fill in your **Profile** — the section at the top between the `---` lines — with what you know right now. It's okay to leave fields blank and fill them in during your first session.
 5. You do not need to add any Session Log entries yet.
+
+**Optional — LLM help filling your Profile:** If the structured top section feels overwhelming, you can use a copy-paste prompt so an LLM turns your narrative (or short answers) into Profile text you paste into your log. See [Profile onboarding (LLM-assisted)](docs/prompts/profile-onboarding.md). That path is optional: if you start a session with a sparse log, your configured coach can also gather history conversationally — see **Section 4: Patient History Intake Protocol** in the [parameters document](docs/parameters/chronic-illness-coach-parameters.md).
+
+### Picking an app to edit your Patient Log
+
+The top section is **structured** (similar to a form in text form). A **Markdown-friendly** editor — syntax highlighting, lists, optional preview — can reduce mistakes and make long Session Log entries easier to read.
+
+**Plain text is still enough.** Notes, TextEdit, Notepad, VS Code, or any editor that saves plain text works fine. The apps below are optional.
+
+If you want a more comfortable experience, including on **phone or tablet**, you might try one of these (SpoonGuide does not endorse any vendor; app names, pricing, and features change — verify before you rely on them):
+
+| App | Mobile / desktop | Notes |
+|-----|------------------|--------|
+| **Bear** | iOS, macOS | Markdown-focused; **Apple only.** If you use Bear’s sync, your content may be stored on the vendor’s systems. |
+| **iA Writer** | iOS, Android, Mac, Windows | Minimal writing workflow; **paid** on some platforms. |
+| **Obsidian** | iOS, Android, Mac, Windows, Linux | Local-first option available; **sync** (official or third-party) is a separate choice with its own privacy trade-offs. |
+| **Markor** | Android | Free / open source; good option if you want no-cost editing on Android. |
+| **1Writer** | iOS | Markdown-oriented editor for iPhone/iPad. |
+
+**Privacy:** If an app **syncs** your notes to the cloud, that can send file contents to that company — a different trade-off from pasting into an LLM, but still **your choice** about what leaves your device. See the [privacy notice](#privacy-notice).
+
+**Accessibility:** Choose an app that works well with **your** assistive technology on **your** devices.
 
 **Your Patient Log stays on your device.** It is never uploaded automatically. You choose when to share it by pasting it into the chat.
 
@@ -164,3 +186,5 @@ You can also trigger a handoff proactively before you get tired — the coach ma
 |---------|------|---------|
 | 1.0 | 2026-03-23 | Initial structure. Universal content: privacy notice, platform comparison, patient log setup, session start, handoff protocol, troubleshooting. |
 | 1.1 | 2026-03-23 | Handoff protocol: replaced Layer 1/2/3 with Profile, Session Log, Context Bridge. Added Patient Log framing. Plain-language replacements for YAML/frontmatter. Glossary link. |
+| 1.2 | 2026-03-24 | Choose your platform: parallel comparison, correct Gemini free path. |
+| 1.3 | 2026-03-24 | Patient Log: optional Markdown-friendly editors (mobile-capable); link to LLM-assisted Profile onboarding prompt. |

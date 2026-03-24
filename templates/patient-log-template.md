@@ -1,17 +1,18 @@
 # Patient Log Template
 
-**Last modified:** 2026-03-23  
-**Version:** 1.0 — Initial template from parameters Section 6
+**Last modified:** 2026-03-24  
+**Version:** 1.1 — Link to Getting Started for editors and optional Profile onboarding
 
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | 2026-03-23 | Initial template. YAML frontmatter and log entry format from parameters Section 6. Self-use reminder. |
+| 1.1 | 2026-03-24 | Pointer to GETTING_STARTED for Markdown-friendly editors and optional LLM-assisted Profile setup. |
 
 ---
 
 This template is for tracking **your own** health. Do not use it to record health information about anyone else.
 
-Copy this file and save it with your initials or ID (e.g., `jd-patient-log.md`). Fill in your **Profile** — the section at the top between the `---` lines — with what you know. Add entries below as you track symptoms, interventions, and sessions. Paste your Patient Log into the chat at the start of each SpoonGuide session.
+Copy this file and save it with your initials or ID (e.g., `jd-patient-log.md`). Fill in your **Profile** — the section at the top between the `---` lines — with what you know. Add entries below as you track symptoms, interventions, and sessions. Paste your Patient Log into the chat at the start of each SpoonGuide session. For Markdown-friendly editor ideas (including mobile apps) and an optional LLM-assisted way to draft your Profile, see [GETTING_STARTED.md](../GETTING_STARTED.md#set-up-your-patient-log).
 
 ---
 patient_id: ""

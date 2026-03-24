@@ -1,7 +1,21 @@
 # Platform Guides — Maintenance Instructions
 
-**Last modified:** 2026-03-23  
+**Last modified:** 2026-03-24  
 **Purpose:** Instructions for using Cursor to validate and update SpoonGuide platform docs against current platform capabilities.
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 1.0 | 2026-03-23 | Initial maintenance instructions and Cursor validation prompt. |
+| 1.1 | 2026-03-24 | Third-party Markdown editor list: occasional review note. |
+
+---
+
+## Third-party Markdown editor list (GETTING_STARTED)
+
+[GETTING_STARTED.md](../../GETTING_STARTED.md) includes a short table of **optional** patient-log editors (Bear, iA Writer, Obsidian, Markor, 1Writer). App names, platforms, pricing, and sync behavior change over time.
+
+- **Do not** put this on the same quarterly cadence as LLM platform guides unless something is clearly wrong.
+- **Do** revisit when a user reports outdated info, or during a broader documentation pass (e.g. before a release).
 
 ---
 
