@@ -1,20 +1,21 @@
 # Patient Log Template
 
 **Last modified:** 2026-03-24  
-**Version:** 1.1 — Link to Getting Started for editors and optional Profile onboarding
+**Version:** 1.2 — Profile completion not required before first session; pointer to Profile paths
 
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | 2026-03-23 | Initial template. YAML frontmatter and log entry format from parameters Section 6. Self-use reminder. |
 | 1.1 | 2026-03-24 | Pointer to GETTING_STARTED for Markdown-friendly editors and optional LLM-assisted Profile setup. |
+| 1.2 | 2026-03-24 | Clarified: you do not need to complete the Profile before the first session; coach onboarding is valid. |
 
 ---
 
 This template is for tracking **your own** health. Do not use it to record health information about anyone else.
 
-Copy this file and save it with your initials or ID (e.g., `jd-patient-log.md`). Fill in your **Profile** — the section at the top between the `---` lines — with what you know. Add entries below as you track symptoms, interventions, and sessions. Paste your Patient Log into the chat at the start of each SpoonGuide session. For Markdown-friendly editor ideas (including mobile apps) and an optional LLM-assisted way to draft your Profile, see [GETTING_STARTED.md](../GETTING_STARTED.md#set-up-your-patient-log).
+Copy this file and save it with your initials or ID (e.g., `jd-patient-log.md`). You **do not** need to complete the **Profile** (the section at the top between the `---` lines) before your first session — you may leave it blank and let your configured coach walk through intake in chat (see **Section 4** in the [parameters document](../docs/parameters/chronic-illness-coach-parameters.md)). You can also fill in what you know by hand, or use an optional LLM-assisted prompt first; see [GETTING_STARTED.md — Set up your Patient Log](../GETTING_STARTED.md#set-up-your-patient-log).  Paste your Patient Log into the chat at the start of each SpoonGuide session.
 
----
+```markdown
 patient_id: ""
 last_updated: ""
 
@@ -65,7 +66,8 @@ autonomy_acknowledgments: []
 
 Add entries below in chronological order. The coach will generate Session Log entries in this format at the end of each session.
 
-## [YYYY-MM-DD] [Entry Type: Intervention | Symptom | Observation | Session]
+[YYYY-MM-DD] [Entry Type: Intervention | Symptom | Observation | Session]
+
 
 **State before:** [Baseline at time of entry — functional level, symptoms, confounders like sleep, stress, weather]
 
@@ -92,3 +94,4 @@ Add entries below in chronological order. The coach will generate Session Log en
 **Next steps / questions:** (optional)
 
 **Coach flags:** (optional)
+```
