@@ -1,11 +1,12 @@
 # Profile onboarding — LLM-assisted setup (optional)
 
-**Last modified:** 2026-03-24  
-**Version:** 1.0 — Initial prompt for SpoonGuide Profile (YAML) generation from prose or Q&A
+**Last modified:** 2026-03-25  
+**Version:** 1.1 — Schema: `lifestyle_and_mechanical_treatments`, `vitals_baseline` (parameters v1.7)
 
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | 2026-03-24 | Initial document: privacy, safety, usage modes, copy-paste prompt aligned to parameters Section 6.2. |
+| 1.1 | 2026-03-25 | Extended schema in copy-paste prompt to match Section 6.2 Phase 4 fields. |
 
 ---
 
@@ -20,7 +21,7 @@ SpoonGuide does not run this for you — you choose **which** LLM product to use
 ## Privacy
 
 - **Your words are processed by whichever LLM you use** (Google, Anthropic, OpenAI, etc.). Each product has its own data retention and privacy settings — same class of consideration as coaching sessions. See [GETTING_STARTED.md — Privacy notice](../../GETTING_STARTED.md#privacy-notice).
-- **SpoonGuide has no servers** and does not receive your Patient Log unless you choose to share it (for example by pasting into a chat).
+- **SpoonGuide has no servers** and does not receive your Patient Log. Don't include your patient log in any GitHub messages or emails. 
 
 ---
 
@@ -64,11 +65,13 @@ Rules:
 2. Output exactly ONE YAML document wrapped in --- delimiters (opening --- line, YAML body, closing --- line). No markdown fences, no commentary, no text before or after the block.
 3. Match this structure and keys exactly. Use valid YAML: 2-space indentation for nested lists/objects; use [] for empty lists; use "" for empty strings where a string is expected.
 4. For current_medications and current_supplements: if none, use empty lists (e.g. current_medications: []). If some exist, use a list of objects with the keys shown. prescriber_aware must be true or false (boolean), not a string.
-5. For caregivers: if none, use an empty list []. Otherwise list objects with type, availability, familiarity.
-6. conditions_confirmed = clinician-diagnosed; conditions_suspected = not yet confirmed. Keep wording faithful to what the user said; do not upgrade "suspected" to "confirmed."
-7. care_access_level: one of specialist | gp-only | limited | none | "" if unknown.
-8. caregiver_involvement_preference: one of proactive | on-request | exclude | "" if unknown.
-9. autonomy_acknowledgments: usually [] unless the user explicitly describes prior acknowledgments in the requested format.
+5. For lifestyle_and_mechanical_treatments: if none, use an empty list []. Otherwise list objects with type (PT | TENS | tVNS | massage | acupuncture | other), description, frequency, status (active | paused | discontinued).
+6. For vitals_baseline: use empty strings for unknown resting BP/HR; last_measured as YYYY-MM-DD or ""; notes for context (position, time of day). Do not invent vitals.
+7. For caregivers: if none, use an empty list []. Otherwise list objects with type, availability, familiarity.
+8. conditions_confirmed = clinician-diagnosed; conditions_suspected = not yet confirmed. Keep wording faithful to what the user said; do not upgrade "suspected" to "confirmed."
+9. care_access_level: one of specialist | gp-only | limited | none | "" if unknown.
+10. caregiver_involvement_preference: one of proactive | on-request | exclude | "" if unknown.
+11. autonomy_acknowledgments: usually [] unless the user explicitly describes prior acknowledgments in the requested format.
 
 Schema to produce:
 
@@ -102,6 +105,19 @@ current_supplements:
     dose: ""
     rationale: ""
 
+lifestyle_and_mechanical_treatments:
+  - type: ""
+    description: ""
+    frequency: ""
+    status: ""
+
+vitals_baseline:
+  bp_systolic: ""
+  bp_diastolic: ""
+  hr_resting: ""
+  last_measured: ""
+  notes: ""
+
 home_monitoring:
   devices: []
   metrics_tracked: []
@@ -119,5 +135,5 @@ goals: []
 autonomy_acknowledgments: []
 ---
 
-Now begin: ask the user for a brief narrative about their conditions, care access, meds/supplements, triggers, contraindications, baseline function, home monitoring, caregivers and preferences, and goals — OR invite them to paste whatever they already have. Then output only the YAML block as specified.
+Now begin: ask the user for a brief narrative about their conditions, care access, meds/supplements, lifestyle/mechanical treatments (PT, TENS, etc.), resting vitals baseline if known, triggers, contraindications, baseline function, home monitoring, caregivers and preferences, and goals — OR invite them to paste whatever they already have. Then output only the YAML block as specified.
 ````

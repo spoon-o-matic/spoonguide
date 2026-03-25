@@ -1,7 +1,7 @@
 # Patient Log Template
 
 **Last modified:** 2026-03-25  
-**Version:** 1.3 — Entry heading example matches parameters v1.4 (no bracket literals); session start via file upload
+**Version:** 1.4 — Profile: `lifestyle_and_mechanical_treatments`, `vitals_baseline`; aligns with parameters v1.7 Section 6.2
 
 | Version | Date | Changes |
 |---------|------|---------|
@@ -9,6 +9,7 @@
 | 1.1 | 2026-03-24 | Pointer to GETTING_STARTED for Markdown-friendly editors and optional LLM-assisted Profile setup. |
 | 1.2 | 2026-03-24 | Clarified: you do not need to complete the Profile before the first session; coach onboarding is valid. |
 | 1.3 | 2026-03-25 | Log entry heading example: `## YYYY-MM-DD: EntryType`. Session start: upload Patient Log (or paste); see GETTING_STARTED. |
+| 1.4 | 2026-03-25 | Profile YAML: `lifestyle_and_mechanical_treatments`, `vitals_baseline` (parameters Phase 4). Optional intervention lifecycle line retained. |
 
 ---
 
@@ -45,6 +46,19 @@ current_supplements:
   - name: ""
     dose: ""
     rationale: ""
+
+lifestyle_and_mechanical_treatments:
+  - type: ""
+    description: ""
+    frequency: ""
+    status: ""
+
+vitals_baseline:
+  bp_systolic: ""
+  bp_diastolic: ""
+  hr_resting: ""
+  last_measured: ""
+  notes: ""
 
 home_monitoring:
   devices: []

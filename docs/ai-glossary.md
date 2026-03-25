@@ -1,11 +1,12 @@
 # AI Terms — SpoonGuide Glossary
 
-**Last modified:** 2026-03-23  
-**Version:** 1.0 — Initial glossary for user reference and internal tracking of technical language decisions
+**Last modified:** 2026-03-25  
+**Version:** 1.1 — Handoff: two-step flow; Patient Log upload; Profile fields note
 
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | 2026-03-23 | Initial glossary. Core AI/LLM terms, SpoonGuide-specific terms, internal tracking notes. |
+| 1.1 | 2026-03-25 | Handoff definition matches parameters §10.5. Patient Log session start via file upload + Context Bridge. |
 
 ---
 
@@ -40,12 +41,12 @@ Terms we intentionally use in user-facing materials to build fluency. On first u
 ## SpoonGuide-Specific Terms
 
 ### Patient Log
-**Definition:** Your personal file that holds your Profile and all your Session Logs. The coach uses it to understand your history and tailor support. You keep it on your device and paste it into the chat when you start a session.
+**Definition:** Your personal file that holds your Profile and all your Session Logs. The coach uses it to understand your history and tailor support. You keep it on your device. When you start a session, **upload** that markdown file to the chat if the app allows (otherwise paste the full text), and—after your first handoff—**paste your Context Bridge** from the prior session in the same opening turn when possible.
 
 **Relationship:** Patient Log = Profile + all Session Logs. The Profile is at the top; each Session Log is a new entry added over time.
 
 ### Profile (Layer 1)
-**Definition:** The stable facts about you at the top of your Patient Log — medications, triggers, contraindications, care access, baseline capacity, and similar information. It changes only when something meaningful changes (e.g., a new medication, a newly identified trigger).
+**Definition:** The stable facts about you at the top of your Patient Log — medications, supplements, triggers, contraindications, care access, baseline capacity, and similar information. It can also include **lifestyle and mechanical treatments** (e.g. PT, TENS, tVNS) and a **resting vitals baseline** (BP/HR), per the [parameters document](parameters/chronic-illness-coach-parameters.md) Section 6.2. It changes when something meaningful changes (often via **handoff** Profile diffs you merge manually).
 
 ### Session Log (Layer 2)
 **Definition:** A record of what happened in a single coaching session — topics covered, interventions discussed, symptom patterns flagged, coach observations. Each session produces one Session Log entry, which you add to the bottom of your Patient Log.
@@ -53,14 +54,19 @@ Terms we intentionally use in user-facing materials to build fluency. On first u
 **Relationship:** Your Patient Log is the accumulation of all your Session Logs plus your Profile.
 
 ### Context Bridge (Layer 3)
-**Definition:** The block of text the coach generates at the end of a session that you paste at the **start** of your next session. It summarizes where you left off, active intervention trials, open questions, and critical context to carry forward — bridging the gap between sessions so the AI starts with full context.
+**Definition:** The **markdown block** the coach gives you at handoff that you copy and paste at the **start** of your **next** session (together with uploading your Patient Log file). It summarizes where you left off, active intervention trials, open questions, and critical context to carry forward.
 
 **Why we use this:** "Context" teaches the LLM concept; "bridge" conveys that this piece connects sessions across the gap. The name does both.
 
 ### Handoff
-**Definition:** The process of capturing everything important from a session so the next session can start with full context. When you trigger a handoff (by saying "handoff," "new chat," or "session summary"), the coach generates three layers: **Profile (Layer 1)**, **Session Log (Layer 2)**, and **Context Bridge (Layer 3)**.
+**Definition:** The process of capturing everything important from a session so the next session can start with full context. When you trigger a handoff (by saying "handoff," "new chat," or "session summary"), the coach follows **Section 10.5** of the [parameters document](parameters/chronic-illness-coach-parameters.md):
 
-**Low-energy handoff:** If you're too tired for the full handoff, say "low energy handoff" — you'll get your Context Bridge (Layer 3) only. A note will remind you to fill in the rest when you have more capacity.
+1. **Step A — Prose changelog:** A short list of Profile (top-of-file) changes for you to validate (ADD / UPDATE / REMOVE by field).
+2. After you **confirm** (or correct), **Step B — Three separate copy blocks:** **Profile diff** (YAML to merge into your Profile), **Session Log entry** (markdown to append), and **Context Bridge** (markdown for your next session).
+
+You merge the Profile diff and Session Log entry into your file yourself (unless a tool like Cursor does it for you); you copy the Context Bridge for the next chat.
+
+**Low-energy handoff:** If you're too tired for the full handoff, say "low energy handoff" — you'll get the **Context Bridge** only. A note will remind you to update Profile and Session Log when you have more capacity.
 
 ---
 

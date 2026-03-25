@@ -1,11 +1,12 @@
 # SpoonGuide ChatGPT Setup Guide
 
-**Last modified:** 2026-03-23  
-**Version:** 1.0 — Initial ChatGPT setup guide with Free/Paid sections
+**Last modified:** 2026-03-25  
+**Version:** 1.1 — Developer testing notes: two-step handoff, three outputs
 
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | 2026-03-23 | Initial guide. Free: paste parameters each session. Plus: Custom GPT with knowledge file. GPT-5.3/GPT-5.4. |
+| 1.1 | 2026-03-25 | Testing checklist aligned with parameters §10.5. |
 
 ---
 
@@ -160,17 +161,23 @@ Use this template for each test session:
 - Dose confirmation behavior: [ ] Yes  [ ] No  [ ] Not tested
 - Hard refusal list respected: [ ] Yes  [ ] No  [ ] Not tested
 - Handoff triggered correctly: [ ] Yes  [ ] No  [ ] Not tested
+- Handoff Step A (prose changelog) before Step B: [ ] Yes  [ ] No  [ ] Not tested
 - Low-energy handoff variant worked: [ ] Yes  [ ] No  [ ] Not tested
 
+**Session start:**
+- Patient Log file attached or pasted: [ ] Yes  [ ] No  [ ] Not applicable
+- Context Bridge pasted when continuing: [ ] Yes  [ ] No  [ ] Not applicable
+
 **Handoff output quality:**
-- Profile (Layer 1) accurate: [ ] Yes  [ ] No  [ ] Not tested
-- Session Log (Layer 2) accurate: [ ] Yes  [ ] No  [ ] Not tested
-- Context Bridge (Layer 3) accurate: [ ] Yes  [ ] No  [ ] Not tested
+- Prose changelog accurate: [ ] Yes  [ ] No  [ ] Not tested
+- Profile diff (YAML) accurate; block-style lists only: [ ] Yes  [ ] No  [ ] Not tested
+- Session Log entry accurate: [ ] Yes  [ ] No  [ ] Not tested
+- Context Bridge accurate: [ ] Yes  [ ] No  [ ] Not tested
 
 **Cognitive load observations:**
 - Session start friction (care access check): 
 - Handoff trigger felt natural: [ ] Yes  [ ] No
-- Three-part handoff manageable at end of session: [ ] Yes  [ ] No
+- Two-step handoff manageable: [ ] Yes  [ ] No
 - Low-energy handoff sufficient when tired: [ ] Yes  [ ] No
 
 **Notable failures or unexpected behaviors:**

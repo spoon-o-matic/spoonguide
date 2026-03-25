@@ -10,7 +10,7 @@ When editing markdown files in this repo, consult [docs/DOC_AUDIENCE.md](docs/DO
 
 ## Quick reference
 
-- **User-facing** (GETTING_STARTED, README, ai-glossary, ai-safety, platform guides, patient-log-template): Plain language. Avoid jargon. Semantic names primary. Handoff layers: "Profile (Layer 1)", "Session Log (Layer 2)", "Context Bridge (Layer 3)" — never lead with "Layer N:" in explanatory text.
+- **User-facing** (GETTING_STARTED, README, ai-glossary, ai-safety, platform guides, patient-log-template): Plain language. Avoid jargon. Semantic names primary. Handoff parts: "Profile (Layer 1)", "Session Log (Layer 2)", "Context Bridge (Layer 3)" — never lead with "Layer N:" in explanatory text. **Handoff flow** (canonical: `docs/parameters/chronic-illness-coach-parameters.md` §10.5): prose changelog → patient confirms → **three separate** copy blocks (Profile diff YAML, Session Log entry, Context Bridge)—not one mega-block with `--- Profile (Layer 1) ---` delimiters.
 
 - **LLM-facing** (docs/parameters/chronic-illness-coach-parameters.md): System prompt. Technical precision. AI is the audience. Not written for patient reading.
 
