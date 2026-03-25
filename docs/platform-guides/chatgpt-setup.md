@@ -69,16 +69,16 @@ On the free tier, you paste the parameters and your patient log at the start of 
 1. Open [chat.openai.com](https://chat.openai.com) and start a new chat
 2. Download [chronic-illness-coach-parameters.md](../parameters/chronic-illness-coach-parameters.md) and open it in a text editor
 3. Copy the **entire** parameters document
-4. Paste it as your first message, followed by your patient log and your opening:
+4. Paste it as your first message, followed by your Patient Log and your opening (attach the log as a file if ChatGPT allows; otherwise paste the file contents):
 
 ```
 [Paste the full chronic-illness-coach-parameters.md content here]
 
 ---
 
-Hi — I'm starting a new session with my patient log. Here it is:
+Hi — I'm starting a new session. I've attached my Patient Log (or pasted it below).
 
-[paste your patient log here]
+[If continuing from a handoff, paste your Context Bridge here.]
 
 I'd like to start by [your focus: e.g. "doing my intake" / "discussing my current symptoms"].
 ```
