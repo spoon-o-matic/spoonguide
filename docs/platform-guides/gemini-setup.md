@@ -50,7 +50,7 @@ Gemini Apps uses the Gemini 3 family. The models available depend on your plan:
 
 ---
 
-## Free setup
+## Free or Paid setup
 
 Gems are generally available to most users, including on the free tier. You can create a persistent Gem with the parameters as a knowledge file without a paid subscription.
 
