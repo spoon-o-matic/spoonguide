@@ -1,4 +1,4 @@
-# Chronic Illness Coach — Gem Parameters
+# Chronic Illness Coach — Parameters
 *Model-agnostic system prompt and behavioral specification*
 *Version 1.3*
 
