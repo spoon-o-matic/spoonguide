@@ -1,7 +1,7 @@
 # SpoonGuide — Getting Started
 
-**Last modified:** 2026-03-24  
-**Version:** 1.4 — Profile paths: manual vs LLM-assisted vs coach onboarding; optional Profile before first session
+**Last modified:** 2026-03-25  
+**Version:** 1.5 — Session start: upload Patient Log file + Context Bridge; handoff: two-step, three separate copy blocks
 
 ## What SpoonGuide is
 
@@ -23,7 +23,7 @@ If you ever get concerning results with an LLM using SpoonGuide, or notice somet
 Your conversations are processed by whichever LLM platform you choose (Google, Anthropic, OpenAI, or Cursor's model providers). Each platform has its own data retention and privacy policies.
 
 - **SpoonGuide does not collect or store your data.** This project has no servers that receive your information.
-- **Your patient log file lives on your device.** You choose when to share it by pasting it into the chat. It is never uploaded automatically.
+- **Your Patient Log file lives on your device.** You choose when to share it by **uploading** it as a file attachment (or pasting it if upload is not available). It is never uploaded automatically.
 - **Platform policies vary.** Check your chosen platform's privacy and activity retention settings. You can often turn off or reduce how long your conversations are stored.
 
 ---
@@ -45,7 +45,7 @@ On **Gemini** and **Claude**, free and paid use the **same setup steps**; paying
 
 - **Least copy-paste on a free tier:** **Gemini** (Gem) or **Claude** (Project) — both keep the parameters loaded in a persistent coach.
 - **ChatGPT is home base:** start on **free** (paste each new chat); move to **Plus** if you want a Custom GPT and skip that step.
-- **Less handoff pasting into your log:** **Cursor** — only if the editor workflow works for you; otherwise use a web platform and paste handoff output into your Patient Log.
+- **Less manual merging after handoff:** **Cursor** — only if the editor workflow works for you; otherwise use a web platform and merge the Profile diff / Session Log blocks into your Patient Log yourself.
 
 Follow the setup guide for your chosen platform. Each guide covers free and paid in **one document** so you can upgrade without switching files.
 
@@ -53,7 +53,7 @@ Follow the setup guide for your chosen platform. Each guide covers free and paid
 
 ## Set up your Patient Log
 
-Your **Patient Log** is a personal file where you record your conditions, medications, symptoms, and session summaries. The coach uses it to understand your history and tailor its support. You keep it on your device and paste it into the chat when you start a session.
+Your **Patient Log** is a personal file where you record your conditions, medications, symptoms, and session summaries. The coach uses it to understand your history and tailor its support. You keep it on your device. When you start a session, **upload** that markdown file to the chat if your app supports file attachments (Gemini, Claude, ChatGPT, and Cursor generally do). If upload is not available, paste the full file text instead.
 
 **Your Patient Log = your Profile + all your Session Logs.** The Profile (at the top) holds your stable information — meds, triggers, contraindications. Each Session Log is a record of one coaching session, added over time. The coach generates both when you do a handoff.
 
@@ -65,10 +65,10 @@ Your **Patient Log** is a personal file where you record your conditions, medica
 
 ### Choosing how to fill your Profile
 
-You **do not** need a finished Profile before your first session. Having a Patient Log **file** (even with empty fields) still helps: you have a place to paste **Profile** and **Session Log** updates after handoffs. 
+You **do not** need a finished Profile before your first session. Having a Patient Log **file** (even with empty fields) still helps: you have a place to merge **Profile** diffs and paste **Session Log** entries after handoffs. 
 
 **1. Coach onboarding — configure the coach, then intake in chat**  
-Finish platform setup (Gem / Project / Custom GPT / Cursor), paste your Patient Log **as-is** (empty Profile is fine), and say you want to start with intake. The coach follows **Section 4: Patient History Intake Protocol** in the [parameters document](docs/parameters/chronic-illness-coach-parameters.md).
+Finish platform setup (Gem / Project / Custom GPT / Cursor), **upload** your Patient Log file **or** paste it **as-is** (empty Profile is fine), and say you want to start with intake. The coach follows **Section 4: Patient History Intake Protocol** in the [parameters document](docs/parameters/chronic-illness-coach-parameters.md).
 
 - **Works well if:** You want the **fewest** steps before talking to the coach, or conversation is easier than editing the structured top section.  
 - **Trade-offs:** The first session is **slower** and more Q&A-heavy. You still get Profile material over time — especially via **handoff** — rather than one perfect block before you start.
@@ -85,7 +85,7 @@ If you are comfortable working with markdown and don't find the profile's text c
 - **Works well if:** You like working directly in the file, or you already have tidy lists (meds, conditions) to copy in.  
 - **Trade-offs:** No extra LLM step to **create** the initial Profile structure, but spacing and list shape matter; a Markdown-friendly editor ([below](#picking-an-app-to-edit-your-patient-log)) reduces mistakes.
 
-**How these compare:** Paths **1** and **2** both involve sharing health context with an LLM. Path **1** uses your **configured SpoonGuide coach** (full parameters from the first message). Path **2** is optional when you want a **single structured paste** early, including from a generic chat before setup. Path **3** avoids an LLM for **building** the initial Profile yourself (you still **paste** the log into the coach when you run a session).
+**How these compare:** Paths **1** and **2** both involve sharing health context with an LLM. Path **1** uses your **configured SpoonGuide coach** (full parameters from the first message). Path **2** is optional when you want a **single structured paste** early, including from a generic chat before setup. Path **3** avoids an LLM for **building** the initial Profile yourself (you still **upload or paste** the Patient Log when you run a session).
 
 ### Picking an app to edit your Patient Log
 
@@ -107,28 +107,29 @@ If you want a more comfortable experience, including on **phone or tablet**, you
 
 **Accessibility:** Choose an app that works well with **your** assistive technology on **your** devices.
 
-**Your Patient Log stays on your device.** It is never uploaded automatically. You choose when to share it by pasting it into the chat.
+**Your Patient Log stays on your device.** It is never uploaded automatically. You choose when to share it by uploading the file (or pasting) into a session.
 
 ---
 
 ## Start your first session
 
 1. Open your coach (Gem / Claude Project / Custom GPT / Cursor chat) and start a new conversation.
-2. Paste your Patient Log.
-3. Use an opening message like this, filling in the bracketed parts:
+2. **Upload** your Patient Log markdown file as an attachment. If your app does not support uploads, paste the full contents of the file instead.
+3. **After the first session:** also **paste your Context Bridge** from the previous handoff in the same message (or immediately after), so the coach picks up where you left off. Skip this on your very first session.
+4. Use an opening message like this, filling in the bracketed parts:
 
 ```
-Hi — I'm starting a new session with my Patient Log. Here it is:
+Hi — I'm starting a new session. I've attached my Patient Log (markdown file).
 
-[paste your full Patient Log here]
+[If continuing from a handoff, paste your Context Bridge block here.]
 
-I don't have much history in the log yet. I'd like to start by [tell the coach what you want to focus on — for example: "doing my intake" / "discussing my current symptoms" / "understanding my POTS better"].
+I'd like to start by [tell the coach what you want to focus on — for example: "doing my intake" / "discussing my current symptoms" / "understanding my POTS better"].
 ```
 
 **What to expect:**
 - The coach will ask about care access and caregiver availability at the start of every session. This is part of the protocol.
-- If you don't paste a log, it will offer a lighter intake instead.
-- If you paste a log with an **empty or sparse** Profile, expect **onboarding-style questions** the first time — that is normal; you do not need a pre-filled Profile.
+- If you don't share a log, it will offer a lighter intake instead.
+- If you share a log with an **empty or sparse** Profile, expect **onboarding-style questions** the first time — that is normal; you do not need a pre-filled Profile.
 - First sessions will feel slower as the coach gathers context. This is normal.
 
 ---
@@ -147,26 +148,30 @@ Type one of these words at any point during a session:
 - `new chat`
 - `session summary`
 
-### What you'll get
+### What you'll get (two steps)
 
-The handoff gives you a 3-layer block. Each layer has a clear role:
+The coach uses a **two-step** handoff so you can check what changed **before** copying structured YAML:
 
-- **Profile (Layer 1)** — Updates to paste into the top section of your Patient Log (only fields that changed)
-- **Session Log (Layer 2)** — A record of this session to paste at the bottom of your Patient Log
-- **Context Bridge (Layer 3)** — What to paste at the start of your next session so the AI picks up where you left off
+1. **Prose changelog** — A short list of Profile (top-of-file) changes: ADD / UPDATE / REMOVE by field. Read it and confirm it is accurate (or ask the coach to fix it).
+2. **Three separate copy blocks** — After you confirm, the coach gives you **three** labeled sections, each with its own code fence:
+   - **Profile diff** — YAML to **merge manually** into the `---` section at the top of your Patient Log (only what changed; lists use block style with `-` lines, not `["like", "this"]`).
+   - **Session Log entry** — Markdown to **append** to the bottom of your Patient Log.
+   - **Context Bridge** — Markdown to **copy for your next session**; paste it when you open the next chat **together with uploading** your saved Patient Log file.
+
+You do **not** copy one giant combined block anymore—use each section for its purpose.
 
 ### If you're too tired for the full handoff
 
-Say **"low energy handoff"** — you'll get your **Context Bridge (Layer 3)** only. A note will remind you to fill in the rest when you have more capacity.
+Say **"low energy handoff"** — you'll get the **Context Bridge** only. A note will remind you to update Profile and Session Log when you have more capacity.
 
-### Step-by-step for using the handoff output
+### Step-by-step after handoff
 
-1. Copy the entire handoff block
-2. Open your Patient Log
-3. **Profile (Layer 1):** Find the top section and update the fields shown (only fields that changed need updating)
-4. **Session Log (Layer 2):** Paste the session entry at the bottom of your Patient Log
-5. **Context Bridge (Layer 3):** Paste this at the start of your next session, before or after your Patient Log
-6. Start a new conversation for your next session
+1. Read the prose changelog and confirm (or correct) it with the coach.
+2. Copy the **Profile diff** YAML block and merge those changes into the top of your Patient Log file by hand.
+3. Copy the **Session Log entry** block and paste it at the bottom of your Patient Log.
+4. **Save** your Patient Log file.
+5. Copy the **Context Bridge** block to your clipboard (or a scratch note).
+6. Start a **new** chat for your next session: **upload** the saved Patient Log file and **paste** the Context Bridge; add a short line about what you want to focus on today.
 
 You can also trigger a handoff proactively before you get tired — the coach may suggest it if the session has been long. You don't have to wait for it to suggest.
 
@@ -188,7 +193,7 @@ You can also trigger a handoff proactively before you get tired — the coach ma
 
 **Why it happens:** The AI's context window (its working memory for the conversation) has limits; attention to earlier details degrades in long sessions.
 
-**What to do:** Trigger a handoff and start a fresh session. If you're mid-topic, say "before we continue — quick handoff" and it will generate the block without derailing the conversation.
+**What to do:** Trigger a handoff and start a fresh session. If you're mid-topic, say "before we continue — quick handoff" and it will start the handoff flow (prose changelog first, then copy blocks after you confirm) so you can create a new chat and continue the conversation.
 
 ### The coach says something that seems clinically wrong
 
@@ -212,3 +217,4 @@ You can also trigger a handoff proactively before you get tired — the coach ma
 | 1.2 | 2026-03-24 | Choose your platform: parallel comparison, correct Gemini free path. |
 | 1.3 | 2026-03-24 | Patient Log: optional Markdown-friendly editors (mobile-capable); link to LLM-assisted Profile onboarding prompt. |
 | 1.4 | 2026-03-24 | Profile optional before first session; “Choosing how to fill your Profile” (manual vs LLM-assisted vs coach onboarding) with trade-offs; first-session note when Profile is sparse. |
+| 1.5 | 2026-03-25 | Session start: upload Patient Log file (paste fallback) + Context Bridge after first session. Handoff: two-step validation, three separate copy blocks (Profile diff, Session Log, Context Bridge). Aligns with parameters v1.4 Phase 1. |

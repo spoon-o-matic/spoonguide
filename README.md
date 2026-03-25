@@ -34,7 +34,7 @@ If you ever get concerning results with an LLM while testing SpoonGuide, or noti
 
 ## What you can do today
 
-You can use SpoonGuide today with no installation. Choose an AI platform (Gemini, Claude, ChatGPT, or Cursor), load SpoonGuide's parameters, and get a coach that follows evidence-informed guardrails and helps you track your care. You keep a personal log file on your device and paste it into the chat at the start of each session. Free and paid options are available for every platform.
+You can use SpoonGuide today with no installation. Choose an AI platform (Gemini, Claude, ChatGPT, or Cursor), load SpoonGuide's parameters, and get a coach that follows evidence-informed guardrails and helps you track your care. You keep a personal Patient Log file on your device; at each session you **upload** that file (or paste it) and, after your first handoff, **paste your Context Bridge** so the coach picks up continuity. Free and paid options are available for every platform.
 
 **[→ Get started](GETTING_STARTED.md)** — Choose your platform, set up your log, and run your first session.
 

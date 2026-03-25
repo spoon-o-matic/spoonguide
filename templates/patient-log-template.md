@@ -1,19 +1,20 @@
 # Patient Log Template
 
-**Last modified:** 2026-03-24  
-**Version:** 1.2 — Profile completion not required before first session; pointer to Profile paths
+**Last modified:** 2026-03-25  
+**Version:** 1.3 — Entry heading example matches parameters v1.4 (no bracket literals); session start via file upload
 
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | 2026-03-23 | Initial template. YAML frontmatter and log entry format from parameters Section 6. Self-use reminder. |
 | 1.1 | 2026-03-24 | Pointer to GETTING_STARTED for Markdown-friendly editors and optional LLM-assisted Profile setup. |
 | 1.2 | 2026-03-24 | Clarified: you do not need to complete the Profile before the first session; coach onboarding is valid. |
+| 1.3 | 2026-03-25 | Log entry heading example: `## YYYY-MM-DD: EntryType`. Session start: upload Patient Log (or paste); see GETTING_STARTED. |
 
 ---
 
 This template is for tracking **your own** health. Do not use it to record health information about anyone else.
 
-Copy this file and save it with your initials or ID (e.g., `jd-patient-log.md`). You **do not** need to complete the **Profile** (the section at the top between the `---` lines) before your first session — you may leave it blank and let your configured coach walk through intake in chat (see **Section 4** in the [parameters document](../docs/parameters/chronic-illness-coach-parameters.md)). You can also use an optional LLM-assisted prompt first; see [GETTING_STARTED.md — Set up your Patient Log](../GETTING_STARTED.md#set-up-your-patient-log).  Paste your Patient Log into the chat at the start of each SpoonGuide session.
+Copy this file and save it with your initials or ID (e.g., `jd-patient-log.md`). You **do not** need to complete the **Profile** (the section at the top between the `---` lines) before your first session — you may leave it blank and let your configured coach walk through intake in chat (see **Section 4** in the [parameters document](../docs/parameters/chronic-illness-coach-parameters.md)). You can also use an optional LLM-assisted prompt first; see [GETTING_STARTED.md — Set up your Patient Log](../GETTING_STARTED.md#set-up-your-patient-log). At the start of each SpoonGuide session, **upload** this file to your coach if the app supports attachments; otherwise paste the full file. After your first handoff, also paste your **Context Bridge** from the prior session (see [GETTING_STARTED.md — The handoff protocol](../GETTING_STARTED.md#the-handoff-protocol)).
 
 ```markdown
 patient_id: ""
@@ -66,9 +67,11 @@ autonomy_acknowledgments: []
 
 Add entries below in chronological order. The coach will generate Session Log entries in this format at the end of each session.
 
-Anything in brackets is meant to be replaced by the information indicated inside the brackets. that is, `[YYYY-MM-DD] [Entry Type: Intervention | Symptom | Observation | Session]` might be filled out as `2026-01-01: Intervention`
+Use a real ISO date and one entry-type word. **Do not** put square brackets in the rendered heading. `EntryType` is one of: **Intervention**, **Symptom**, **Observation**, or **Session**.
 
-# [YYYY-MM-DD]: [Entry Type: Intervention | Symptom | Observation | Session]
+Examples: `## 2026-01-01: Session` or `## 2026-01-01: Intervention`
+
+## YYYY-MM-DD: EntryType
 
 
 **State before:** [Baseline at time of entry — functional level, symptoms, confounders like sleep, stress, weather]
