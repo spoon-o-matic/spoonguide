@@ -80,6 +80,8 @@ Examples: `## 2026-01-01: Session` or `## 2026-01-01: Intervention`
 - Dose / protocol: [if applicable]
 - Timing: [time of day, relation to meals, activity]
 
+**Intervention lifecycle status:** (optional — Intervention entries only) proposed | patient-confirmed | outcome-reported | resolved — see **Section 6.3.1** in the [parameters document](../docs/parameters/chronic-illness-coach-parameters.md)
+
 **Rationale:** [Why this intervention; proposed mechanism]
 
 **Confounding factors:** (optional)
