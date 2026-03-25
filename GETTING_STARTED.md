@@ -1,7 +1,7 @@
 # SpoonGuide — Getting Started
 
 **Last modified:** 2026-03-25  
-**Version:** 1.5 — Session start: upload Patient Log file + Context Bridge; handoff: two-step, three separate copy blocks
+**Version:** 1.6 — Profile: lifestyle/mechanical treatments + vitals baseline (parameters §6.2)
 
 ## What SpoonGuide is
 
@@ -55,7 +55,7 @@ Follow the setup guide for your chosen platform. Each guide covers free and paid
 
 Your **Patient Log** is a personal file where you record your conditions, medications, symptoms, and session summaries. The coach uses it to understand your history and tailor its support. You keep it on your device. When you start a session, **upload** that markdown file to the chat if your app supports file attachments (Gemini, Claude, ChatGPT, and Cursor generally do). If upload is not available, paste the full file text instead.
 
-**Your Patient Log = your Profile + all your Session Logs.** The Profile (at the top) holds your stable information — meds, triggers, contraindications. Each Session Log is a record of one coaching session, added over time. The coach generates both when you do a handoff.
+**Your Patient Log = your Profile + all your Session Logs.** The Profile (at the top) holds your stable information — medications, supplements, triggers, contraindications, and related fields. It can also include **lifestyle and mechanical treatments** (e.g. physical therapy, TENS, tVNS) and a **resting vitals baseline** (blood pressure and heart rate), as defined in the [parameters document](docs/parameters/chronic-illness-coach-parameters.md) (Section 6.2, YAML frontmatter schema). Each Session Log is a record of one coaching session, added over time. The coach helps you update both via **handoff** (Profile diff + Session Log entry).
 
 1. Download the patient log template: [patient-log-template.md](templates/patient-log-template.md)
 2. Open it in any text editor (Notes, TextEdit, Notepad, VS Code — anything that saves plain text)
@@ -218,3 +218,4 @@ You can also trigger a handoff proactively before you get tired — the coach ma
 | 1.3 | 2026-03-24 | Patient Log: optional Markdown-friendly editors (mobile-capable); link to LLM-assisted Profile onboarding prompt. |
 | 1.4 | 2026-03-24 | Profile optional before first session; “Choosing how to fill your Profile” (manual vs LLM-assisted vs coach onboarding) with trade-offs; first-session note when Profile is sparse. |
 | 1.5 | 2026-03-25 | Session start: upload Patient Log file (paste fallback) + Context Bridge after first session. Handoff: two-step validation, three separate copy blocks (Profile diff, Session Log, Context Bridge). Aligns with parameters v1.4 Phase 1. |
+| 1.6 | 2026-03-25 | Patient Log overview: Profile may include lifestyle/mechanical treatments and vitals baseline (parameters §6.2). |

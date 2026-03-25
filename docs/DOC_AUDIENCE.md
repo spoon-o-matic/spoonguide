@@ -54,12 +54,14 @@ Technical language allowed. Contributors and AI assistants editing implementatio
 
 ---
 
-## Handoff layer naming convention
+## Handoff naming and output shape
 
-Across user-facing docs, handoff layers are always referred to as **Semantic Name (Layer N)**:
+Across user-facing docs, handoff **parts** are referred to as **Semantic Name (Layer N)** when a short label helps:
 
-- **Profile (Layer 1)** — Updates to top of Patient Log
-- **Session Log (Layer 2)** — Session record at bottom of Patient Log
-- **Context Bridge (Layer 3)** — Paste at start of next session
+- **Profile (Layer 1)** — YAML Profile diff to merge into the top of the Patient Log (after you confirm the prose changelog)
+- **Session Log (Layer 2)** — Session entry markdown to append at the bottom of the Patient Log
+- **Context Bridge (Layer 3)** — Markdown to paste at the start of the **next** session (with uploaded Patient Log)
 
-Use semantic name first. Layer number in parentheses for context. Do not lead with "Layer N:" in explanatory text. In the parameters doc handoff output format, delimiters use the same convention: `--- Profile (Layer 1) ---`, etc.
+Use semantic name first. Layer number in parentheses for context. Do not lead with "Layer N:" in explanatory text.
+
+**Canonical workflow** is **Section 10.5** of [chronic-illness-coach-parameters.md](parameters/chronic-illness-coach-parameters.md): **two steps** — (1) prose changelog for validation, (2) **three separate** labeled outputs (each with its own code fence), not a single contiguous block with `--- Profile (Layer 1) ---`-style delimiters. Those delimiter lines are **not** used in the current handoff spec.

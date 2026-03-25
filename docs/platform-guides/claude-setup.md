@@ -1,11 +1,12 @@
 # SpoonGuide Claude Setup Guide
 
-**Last modified:** 2026-03-23  
-**Version:** 1.0 — Initial Claude setup guide with Free/Paid sections
+**Last modified:** 2026-03-25  
+**Version:** 1.1 — Testing notes: two-step handoff, three outputs; troubleshooting Context Bridge wording
 
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | 2026-03-23 | Initial guide. Claude Projects free. Free: Sonnet, 200K context. Pro: Opus, more usage. Parameters as knowledge file upload. |
+| 1.1 | 2026-03-25 | Developer testing checklist aligned with parameters §10.5 (prose changelog → Profile diff, Session Log, Context Bridge). |
 
 ---
 
@@ -109,7 +110,7 @@ After setup, see [GETTING_STARTED.md](../../GETTING_STARTED.md) for:
 
 **Why it happens:** The context window (the AI's working memory for the conversation) includes your log, parameters, and conversation. Very long sessions can push older content out of effective attention.
 
-**What to do:** Trigger a handoff and start a fresh session. The handoff compresses important state into your Context Bridge (Layer 3) for the next session.
+**What to do:** Trigger a handoff and start a fresh session. After the two-step handoff (see [GETTING_STARTED.md](../../GETTING_STARTED.md#the-handoff-protocol)), copy the **Context Bridge** into your next session together with uploading your Patient Log file.
 
 ---
 
@@ -131,17 +132,23 @@ Use this template for each test session:
 - Dose confirmation behavior: [ ] Yes  [ ] No  [ ] Not tested
 - Hard refusal list respected: [ ] Yes  [ ] No  [ ] Not tested
 - Handoff triggered correctly: [ ] Yes  [ ] No  [ ] Not tested
+- Handoff Step A (prose changelog) before Step B (three blocks): [ ] Yes  [ ] No  [ ] Not tested
 - Low-energy handoff variant worked: [ ] Yes  [ ] No  [ ] Not tested
 
+**Session start:**
+- Patient Log uploaded as file: [ ] Yes  [ ] No  [ ] Not applicable
+- Context Bridge pasted when continuing: [ ] Yes  [ ] No  [ ] Not applicable
+
 **Handoff output quality:**
-- Profile (Layer 1) accurate: [ ] Yes  [ ] No  [ ] Not tested
-- Session Log (Layer 2) accurate: [ ] Yes  [ ] No  [ ] Not tested
-- Context Bridge (Layer 3) accurate: [ ] Yes  [ ] No  [ ] Not tested
+- Prose changelog accurate: [ ] Yes  [ ] No  [ ] Not tested
+- Profile diff (YAML) accurate; block-style lists only: [ ] Yes  [ ] No  [ ] Not tested
+- Session Log entry accurate: [ ] Yes  [ ] No  [ ] Not tested
+- Context Bridge accurate: [ ] Yes  [ ] No  [ ] Not tested
 
 **Cognitive load observations:**
 - Session start friction (care access check): 
 - Handoff trigger felt natural: [ ] Yes  [ ] No
-- Three-part handoff manageable at end of session: [ ] Yes  [ ] No
+- Two-step handoff (confirm changelog, then copy blocks) manageable: [ ] Yes  [ ] No
 - Low-energy handoff sufficient when tired: [ ] Yes  [ ] No
 
 **Notable failures or unexpected behaviors:**
